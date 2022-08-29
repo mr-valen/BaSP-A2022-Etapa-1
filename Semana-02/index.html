@@ -13,7 +13,7 @@
     <!-- For the body besides a header and a footer I think there should be some difference between navigation bar at the side and the main section with all the sections and articles, so I used aside and main tags but maybe there is some better way to do it. -->
     <header>
         <img src="img/logo.png" alt="Trackgenix Logo">
-        <!-- I'm not totally sure if this is the appropiate way of doing it, but I believe if it take you to another place it should be an anchor. Target is a new blank page because we don't want users to leave when they are watching our social media at their respective. By the way I don't think it should be inside a nav cause it's not to move within the site itself.-->
+        <!-- I'm not totally sure if this is the appropiate way of doing it, but I believe if it take you to another place it should be an anchor. But this could be replaced with insite social media windows, in that case it should be a button. -->
         <ul>
             <li>
                 <a href="http://" target="_blank" rel="noopener noreferrer" title="Link to Twitter">
@@ -72,6 +72,7 @@
             <h3>AN EASY SYSTEM TO TRACK YOUR TEAM'S TIMES AND PROJECTS</h3>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione amet fugit minus facere repudiandae quae autem. Blanditiis quod optio doloremque, mollitia tempore nobis? Molestias harum modi, doloremque ad vel ullam!</p>
             <img src="img/img-1.png" alt="Presentation Image">
+            <!-- Maybe should be an anchor cause it sends you to another page, but right now it fits. -->
             <button>LEARN MORE</button>
         </section>
         <section name="Services">
@@ -81,14 +82,14 @@
                 <h3>Hours Registry</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam iure aliquam laborum laboriosam nobis ut tempore nisi, reprehenderit ab pariatur repellendus illum provident. Corrupti temporibus, maiores porro nam inventore ipsa.</p>
             </article>
-            <article name="Reports">
-                <img src="img/icon-section-reports.png" alt="Reports Icon">
-                <h3>Reports</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam iure aliquam laborum laboriosam nobis ut tempore nisi, reprehenderit ab pariatur repellendus illum provident. Corrupti temporibus, maiores porro nam inventore ipsa.</p>
-            </article>
             <article name="Resources Managment">
                 <img src="img/icon-section-resources.png" alt="Resources Managment">
                 <h3>Resources Managment</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam iure aliquam laborum laboriosam nobis ut tempore nisi, reprehenderit ab pariatur repellendus illum provident. Corrupti temporibus, maiores porro nam inventore ipsa.</p>
+            </article>
+            <article name="Reports">
+                <img src="img/icon-section-reports.png" alt="Reports Icon">
+                <h3>Reports</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam iure aliquam laborum laboriosam nobis ut tempore nisi, reprehenderit ab pariatur repellendus illum provident. Corrupti temporibus, maiores porro nam inventore ipsa.</p>
             </article>
             <article name="Multiple Roles">
@@ -97,9 +98,89 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam iure aliquam laborum laboriosam nobis ut tempore nisi, reprehenderit ab pariatur repellendus illum provident. Corrupti temporibus, maiores porro nam inventore ipsa.</p>
             </article>
         </section>
+        <section name="Why pick us Carousel" >
+            <h2>WHY TRACKGENIX?</h2>
+            <article>
+                <img src="/Semana-02/img/img-0.png" alt="Placeholder Image">
+                <h3>Productivity enhancement</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            </article>
+            <article>
+                <img src="/Semana-02/img/img-0.png" alt="Placeholder Image">
+                <h3>Work tracebility</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            </article>
+            <article>
+                <img src="/Semana-02/img/img-0.png" alt="Placeholder Image">
+                <h3>Leadership and teamwork</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            </article>
+        </section>
+        <section name="Request System">
+            <form action="#" method="get">
+                <label for="name">Name</label>
+                <input type="text">
+                <label for="email">Email</label>
+                <input type="email">
+                <label for="contact-area">Contact Area</label>
+                <!-- This could be possible be a radio button, to send one message per submit. But it could be a good functionality to send to different receivers at once. -->
+                <input type="checkbox" checked name="Human Resources">
+                <label for="human-resources">Human Resources</label>
+                <input type="checkbox" name="Systems">
+                <label for="systems">Systems</label>
+                <input type="checkbox" name="Commercial">
+                <label for="commercial">Commercial</label>
+                <label for="message">Message</label>
+                <textarea name="Message" cols="30" rows="10"></textarea>
+                <button>Reset</button>
+                <input type="submit">
+            </form>
+        </section>
+        <section name="Our Story">
+            <h2>OUR STORY</h2>
+            <article>
+                <h3>AN EASY SYSTEM</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ut error atque vero illo dolore architecto aliquid porro sequi impedit earum ipsum, excepturi fuga obcaecati reprehenderit voluptas est iure. Magnam!</p>
+            </article>
+            <img src="/Semana-02/img/img-0.png" alt="Placeholder Image">
+            <article>
+                <h3>AN EASY SYSTEM</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </article>
+        </section>
+        <section name="Contact Links">
+            <h3>Products</h3>
+            <ul>
+                <li><a href="">Functionalities</a></li>
+                <li><a href="">Downloads</a></li>
+                <li><a href="">Integrations</a></li>
+                <li><a href="">Extras</a></li>
+            </ul>
+            <h3>Company</h3>
+            <ul>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Clients</a></li>
+                <li><a href="">Resources</a></li>
+                <li><a href="">Blog</a></li>
+            </ul>
+            <h3>Support</h3>
+            <ul>
+                <li><a href="">Help</a></li>
+                <li><a href="">Tutorials</a></li>
+                <li><a href="">API</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </section>
     </main>
     <footer>
+        <ul>
+            <li><a href=""><img src="/Semana-02/img/icon-footer-twitter.png" alt=""></a></li>
+            <li><a href=""><img src="/Semana-02/img/icon-footer-instagram.png" alt=""></a></li>
+            <li><a href=""><img src="/Semana-02/img/icon-footer-linkedin.png" alt=""></a></li>
+            <li><a href=""><img src="/Semana-02/img/icon-footer-facebook.png" alt=""></a></li>
+        </ul>
+        <h4>Rosario, Argentina</h4>
+        <h4>Copyright &copy; 2022 Radium Rocket. All rights reserved</h4>
+    </footer>
 </body>
-
-</footer>
 </html>
