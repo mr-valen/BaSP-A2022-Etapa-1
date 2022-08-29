@@ -4,11 +4,102 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trackgenix</title>
+    <meta name="description" content="Trackgenix's site is a system where you can track and organize team's times and projects">
+    <title>Trackgenix | A System to Track Team's Times and Projects</title>
     <script src="js/index.js"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    
+    <!-- For the body besides a header and a footer I think there should be some difference between navigation bar at the side and the main section with all the sections and articles, so I used aside and main tags but maybe there is some better way to do it. -->
+    <header>
+        <img src="img/logo.png" alt="Trackgenix Logo">
+        <!-- I'm not totally sure if this is the appropiate way of doing it, but I believe if it take you to another place it should be an anchor. Target is a new blank page because we don't want users to leave when they are watching our social media at their respective. By the way I don't think it should be inside a nav cause it's not to move within the site itself.-->
+        <ul>
+            <li>
+                <a href="http://" target="_blank" rel="noopener noreferrer" title="Link to Twitter">
+                    <img src="img/icon-header-twitter.png" alt="Twitter Icon">
+                </a>
+            </li>
+            <li>
+                <a href="http://" target="_blank" rel="noopener noreferrer" title="Link to Instagram">
+                    <img src="img/icon-header-instagram.png" alt="Instagram Icon">
+                </a>
+            </li>
+            <li>
+                <a href="http://" target="_blank" rel="noopener noreferrer" title="Link to LinkedIn">
+                    <img src="img/icon-header-linkedin.png" alt="LinkedIn Icon">
+                </a>
+            </li>
+            <li>
+                <a href="http://" target="_blank" rel="noopener noreferrer" title="Link to Facebook">
+                    <img src="img/icon-header-facebook.png" alt="Facebook Icon">
+                </a>
+            </li>
+        </ul>
+    </header>
+    <aside>
+        <nav>
+            <ul>
+                <li>
+                    <a href=#Menu>Menu</a>
+                </li>
+                <li>
+                    <a href=#Home>Home</a>
+                </li>
+                <li>
+                    <a href=#Signup>Sign Up</a>
+                </li>
+                <li>
+                    <a href=#Signin>Sign In</a>
+                </li>
+            </ul>
+        </nav>
+        <section name="Contact">
+            <p>Get in touch</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam culpa ea saepe facilis aut, vero quod quis provident voluptates illo? Voluptatum officia perferendis quidem est ipsam aliquid. Quae, tempore tempora!</p>
+            <img src="img/icon-aside-phone.png" alt="Phone Icon">
+            <p>(000) 000-0000</p>
+            <img src="img/icon-aside-email.png" alt="Email Icon">
+            <p>information@untitled.tld</p>
+            <img src="img/icon-aside-address.png" alt="Address Icon">
+            <p>1234 Somewhere Road #8254</p>
+            <p>Nashville, TN 00000-0000</p>
+        </section>
+    </aside>
+    <main>
+        <section name="Presentation">
+            <h1>Trackgenix by RadiumRocket</h1>
+            <h3>AN EASY SYSTEM TO TRACK YOUR TEAM'S TIMES AND PROJECTS</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione amet fugit minus facere repudiandae quae autem. Blanditiis quod optio doloremque, mollitia tempore nobis? Molestias harum modi, doloremque ad vel ullam!</p>
+            <img src="img/img-1.png" alt="Presentation Image">
+            <button>LEARN MORE</button>
+        </section>
+        <section name="Services">
+            <h2>SERVICES</h2>
+            <article name="Hours Registry">
+                <img src="img/icon-section-hours.png" alt="Hours Registry Icon">
+                <h3>Hours Registry</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam iure aliquam laborum laboriosam nobis ut tempore nisi, reprehenderit ab pariatur repellendus illum provident. Corrupti temporibus, maiores porro nam inventore ipsa.</p>
+            </article>
+            <article name="Reports">
+                <img src="img/icon-section-reports.png" alt="Reports Icon">
+                <h3>Reports</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam iure aliquam laborum laboriosam nobis ut tempore nisi, reprehenderit ab pariatur repellendus illum provident. Corrupti temporibus, maiores porro nam inventore ipsa.</p>
+            </article>
+            <article name="Resources Managment">
+                <img src="img/icon-section-resources.png" alt="Resources Managment">
+                <h3>Resources Managment</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam iure aliquam laborum laboriosam nobis ut tempore nisi, reprehenderit ab pariatur repellendus illum provident. Corrupti temporibus, maiores porro nam inventore ipsa.</p>
+            </article>
+            <article name="Multiple Roles">
+                <img src="img/icon-section-roles.png" alt="Multiple Roles Icon">
+                <h3>Multiple Roles</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam iure aliquam laborum laboriosam nobis ut tempore nisi, reprehenderit ab pariatur repellendus illum provident. Corrupti temporibus, maiores porro nam inventore ipsa.</p>
+            </article>
+        </section>
+    </main>
+    <footer>
 </body>
+
+</footer>
 </html>
