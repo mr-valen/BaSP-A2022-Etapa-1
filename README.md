@@ -1,11 +1,13 @@
 # Become a Software Professional 2022 Radium Rocket
 <div align="center"><img src="./Semana-02/img/logo.png"></div>
-####[GitHub Pages](https://mr-valen.github.io/BaSP-A2022-Etapa-1/Semana-02/index.html)
+[GitHub Pages](https://mr-valen.github.io/BaSP-A2022-Etapa-1/Semana-02/index.html)
+
+## Description
  This repository is for a course project about a website called Trackgenix where you can to organize your team's projects and their respective times. The objective of this project is to get in touch with all layers of web development and to be able to create a website from scratch.
  * 🧰 Technologies and tools used: | `Slack` | `Figma` | `Visual Studio Code` | `HTML5` | `Git` | `GitHub` |
  * 🔨 Advance on website: | UI Design: All site | HTML: Landing page |
 
-## Weeks index
+## Index
 * [Week 01](#week-01)
 * [Week 02](#week-02)
 
