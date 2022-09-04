@@ -1,5 +1,5 @@
 # Become a Software Professional 2022 Radium Rocket
-<div allign="center"><img src="./Week-02/img/logo.png"></div>
+<div align="center"><img src="./Week-02/img/logo.png"></div>
 
 [GitHub Pages](https://mr-valen.github.io/BaSP-A2022-Etapa-1/Week-03/index.html)
 
@@ -12,7 +12,7 @@
 
 ## Description
  This repository is for a course project about a website called Trackgenix where you can to organize your team's projects and their respective times. The objective of this project is to get in touch with all layers of web development and to be able to create a website from scratch.
- * 🧰 Technologies and tools used: | `Slack` | `Figma` | `Visual Studio Code` | `HTML5` | `Git` | `GitHub` |
+ * 🧰 Technologies and tools used: | `Slack` | `Figma` | `Visual Studio Code` | `HTML5` | `Git` | `GitHub` | `CSS` |
  * 🔨 Advance on website: | UI Design: All site | HTML: Landing page |
 
 ## Week 01 
@@ -23,12 +23,15 @@
 
 ## Week 02 
 ### 📎 Introduction to tags and SEO in HTML
- In this week we individually made and tag the HTML file for the landing page, following what we put on Figma. Then we pushed it to Github.
+ This week we individually made and tag the HTML file for the landing page, following what we put on Figma. Then we pushed it to Github.
  * 🧰 | `Visual Studio Code` | `HTML5` | `Git` | `GitHub` |
  * 🔨 | HTML: Landing page |
 
 ## Week 03
 ### 🤿 Diving into CSS Cascade
+On this week we worked on our individual projects adding styles with CSS most basic properties, trying to achieve a pixel perfect appereance relative to Figma sheet.
+ * 🧰 | `CSS` | `Git` | `GitHub` |
+ * 🔨 | CSS: Landing page 
 
  ## Author
  Created by Valentín Michilena [@mr-valen](https://github.com/mr-valen)
