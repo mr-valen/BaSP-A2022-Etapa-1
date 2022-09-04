@@ -29,7 +29,7 @@
 
 ## Week 03
 ### 🤿 Diving into CSS Cascade
-On this week we worked on our individual projects adding styles with CSS most basic properties, trying to achieve a pixel perfect appereance relative to Figma sheet.
+On this week we worked on our individual projects adding styles with CSS's most basic properties, trying to achieve a pixel perfect appereance relative to Figma sheet.
  * 🧰 | `CSS` | `Git` | `GitHub` |
  * 🔨 | CSS: Landing page 
 

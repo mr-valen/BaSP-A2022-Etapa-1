@@ -23,9 +23,6 @@ body>*{
 a{
     text-decoration: none;
 }
-h1, h2, h3, h4{
-    white-space: nowrap;
-}
 h1{
     font-size: 40px;
 }
@@ -45,7 +42,6 @@ a, h1, h2, h3, h4, p{
     color: var(--clr-pm)
 }
 .btn{
-    text-transform: uppercase;
     border: 2px solid var(--clr-pm);
     padding: 15px 30px;
     border-radius: 5px;
@@ -130,12 +126,10 @@ main>section{
     overflow: inherit;
     padding: 15px 0 30px 30px;
     border-bottom: 1px solid var(--clr-pm);
-    margin-right: 20px;
+    margin: 10px 20px 0 0;
 }
 /* SECTION 1 */
-
 main>section:nth-child(1){
-    margin-top: 10px;
     padding-bottom: 60px;
 }
 main>section:nth-child(1)>h1{
@@ -160,10 +154,34 @@ main>section:nth-child(1)>a{
     margin-top: 20px ;
 }
 /* SECTION 2 */
-
-
-
-
+main>section:nth-child(2)>h2{
+    margin-bottom: 30px;
+}
+main>section:nth-child(2)>article{
+    max-width: 47%;
+    margin: 20px 0;
+}
+main>section:nth-child(2)>article:nth-child(2n){
+    float: left;
+}
+main>section:nth-child(2)>article:nth-child(2n-1){
+    float: right;
+}
+main>section:nth-child(2)>article>img{
+    float: left;
+    width: 125px;
+}
+main>section:nth-child(2)>article>h3{
+    margin: 10px 0 5px 145px;
+}
+main>section:nth-child(2)>article>p{
+    margin-left: 146px;
+    margin-right: 100px;
+    padding: 10px 7px 10px 10px;
+    border-top: 1px solid var(--clr-pm);
+    color: black;
+    font-size: 15px;
+}
 /************/
 /** FOOTER **/
 /************/
