@@ -31,7 +31,7 @@
 ### 🤿 Diving into CSS Cascade
 On this week we worked on our individual projects adding styles with CSS's most basic properties, trying to achieve a pixel perfect appereance relative to Figma sheet.
  * 🧰 | `CSS` | `Git` | `GitHub` |
- * 🔨 | CSS: Landing page 
+ * 🔨 | CSS: Landing page |
 
  ## Author
  Created by Valentín Michilena [@mr-valen](https://github.com/mr-valen)
