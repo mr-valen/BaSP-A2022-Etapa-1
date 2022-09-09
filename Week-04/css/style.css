@@ -1,0 +1,44 @@
+
+/* VARIABLES */
+:root{
+    --clr-background: #FFFFFF;
+    --clr-primary: #373867;
+    --clr-secondary: #aace9b;
+    --clr-secondary-lg: #aace9b66;
+    --clr-al: #F33413;
+    --clr-su: #49A37B;
+    --clr-ch: #34636E;
+}
+html{
+    height: auto;
+    width: 100vw;
+    min-height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+body>*{
+    overflow: hidden;
+    background-color: var(--cl-bg);
+}
+a{
+    text-decoration: none;
+}
+h1{
+    font-size: 40px;
+}
+h2{
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+h3{
+    font-size: 20px;
+}
+h4, a{
+    font-size: 15px;
+}
+p{
+    font-size: 12px;
+}
+a, h1, h2, h3, h4, p{
+    color: var(--clr-pm)
+}
