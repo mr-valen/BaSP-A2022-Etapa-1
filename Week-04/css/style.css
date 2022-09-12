@@ -1,6 +1,6 @@
 
 /* VARIABLES */
-:root{
+:root {
     --clr-background: #FFFFFF;
     --clr-primary: #373867;
     --clr-secondary: #aace9b;
@@ -9,36 +9,48 @@
     --clr-su: #49A37B;
     --clr-ch: #34636E;
 }
-html{
+html {
     height: auto;
     width: 100vw;
     min-height: 100%;
     font-family: 'Roboto', sans-serif;
 }
-body>*{
+body>* {
     overflow: hidden;
-    background-color: var(--cl-bg);
+    background-color: var(--clr-background);
+    color: var(--clr-primary)
 }
-a{
+a {
     text-decoration: none;
 }
-h1{
+h1 {
     font-size: 40px;
 }
-h2{
+h2 {
     font-size: 25px;
-    text-transform: uppercase;
     font-weight: 700;
+    text-transform: uppercase;
 }
-h3{
-    font-size: 20px;
-}
-h4, a{
+h3 {
     font-size: 15px;
 }
-p{
-    font-size: 12px;
+h4 {
+    font-size: 15px;
 }
-a, h1, h2, h3, h4, p{
-    color: var(--clr-pm)
+p {
+    font-size: 10px;
+}
+button {
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+.btn {
+    text-transform: uppercase;
+    background-color: var(--clr-background);
+    border: 2px solid var(--clr-primary);
+    border-radius: 5px;
+}
+section {
+    margin: 0 8px;
 }

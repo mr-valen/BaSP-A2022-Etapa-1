@@ -1,3 +1,65 @@
-main img{
-    display: none;
+.title-section {
+    border-bottom: 3px solid var(--clr-primary);
+}
+.title-section h1, h3 {
+    text-align: center;
+}
+.span-title {
+    margin-top: 20px;
+    display: block;
+    font-weight: bold;
+}
+.title-section h3 {
+    margin: 12px 0;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+.title-section p {
+    padding: 0 20px;
+    text-align: justify;
+    font-weight: 100;
+}
+.title-section img {
+    display: block;
+    object-fit: cover;
+    width: 270px;
+    height: 126px;
+    margin: 12px auto;
+    border-radius: 10px;
+}
+.title-section .btn {
+    display: block;
+    width: fit-content;
+    margin: 25px auto;
+    padding: 5px 10px;
+    font-size: 8px;
+}
+.services-section {
+    border-bottom: 2px solid var(--clr-primary);
+}
+.services-section h2 {
+    margin: 10px;
+}
+.services-section article {
+    display: flex;
+    margin: 10px;
+}
+.services-section article:nth-child(2n-1) {
+    flex-direction: row-reverse;
+}
+.services-section img {
+    width: 95px;
+    margin: 0 10px;
+}
+.services-section h3, p{
+    text-align: left;
+}
+.services-section h3 {
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--clr-primary);
+    font-weight: bold;
+}
+.services-section p {
+    margin-top: 10px;
+    font-weight: 100;
 }
