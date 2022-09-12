@@ -156,6 +156,9 @@ main>section:first-child, main>section:last-child {
     font-weight: 400;
     text-transform: uppercase;
 }
+.story-section p {
+    line-height: 15px;
+}
 .story-section p:nth-child(2n-1) {
     margin-bottom: 10px;
 }
@@ -166,8 +169,21 @@ main>section:first-child, main>section:last-child {
     border: 1px solid var(--clr-primary);
 }
 .list-section {
-    padding: 0 20px
+    padding: 0 60px 5px;
+}
+.list-section h3 {
+    text-decoration: underline;
+    margin-bottom: 5px;
 }
 .list-section ul {
+    margin-bottom: 10px;
+    padding-left: 20px;
     list-style: disc;
+}
+.list-section li {
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+.list-section li::marker {
+    font-size: 8px;
 }
