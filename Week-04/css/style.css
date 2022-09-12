@@ -1,22 +1,19 @@
-
-/* VARIABLES */
 :root {
     --clr-background: #FFFFFF;
     --clr-primary: #373867;
+    --clr-primary-light: #37386766;
     --clr-secondary: #aace9b;
-    --clr-secondary-lg: #aace9b66;
-    --clr-al: #F33413;
-    --clr-su: #49A37B;
-    --clr-ch: #34636E;
+    --clr-secondary-light: #aace9b66;
+    --clr-alert: #F33413;
+    --clr-success: #49A37B;
+    --clr-check: #34636E;
 }
 html {
     height: auto;
-    width: 100vw;
-    min-height: 100%;
     font-family: 'Roboto', sans-serif;
 }
 body>* {
-    overflow: hidden;
+    overflow-x: hidden;
     background-color: var(--clr-background);
     color: var(--clr-primary)
 }
@@ -27,18 +24,19 @@ h1 {
     font-size: 40px;
 }
 h2 {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
 }
 h3 {
     font-size: 15px;
+    font-weight: bold;
 }
 h4 {
     font-size: 15px;
 }
 p {
-    font-size: 10px;
+    font-size: 12px;
 }
 button {
 	background: none;
@@ -52,5 +50,9 @@ button {
     border-radius: 5px;
 }
 section {
-    margin: 0 8px;
+    margin: 15px 8px;
+    padding: 0 10px;
+}
+input {
+    accent-color: var(--clr-check);
 }
