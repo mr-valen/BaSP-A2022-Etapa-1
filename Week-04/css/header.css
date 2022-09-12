@@ -23,7 +23,7 @@ header .btn-arrow {
     border-width: .6rem .6rem 0 .6rem;
     border-color: var(--clr-secondary) transparent transparent transparent;
 }
-@media (min-width: 768px) {
+@media (min-width: 480px) {
     header {
         display: flex;
         flex-wrap: wrap;
@@ -32,9 +32,9 @@ header .btn-arrow {
         width: 50%;
     }
     header>a img {
-        padding-right: 50px;
         max-width: 85%;
         margin-top: 10px;
+        margin-left: 10px;
     }
     header ul {
         display: flex;
