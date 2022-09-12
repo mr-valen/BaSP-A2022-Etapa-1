@@ -17,11 +17,8 @@ body>* {
     background-color: var(--clr-background);
     color: var(--clr-primary)
 }
-a {
-    text-decoration: none;
-}
 h1 {
-    font-size: 40px;
+    font-size: 30px;
 }
 h2 {
     font-size: 20px;
@@ -32,11 +29,14 @@ h3 {
     font-size: 15px;
     font-weight: bold;
 }
-h4 {
-    font-size: 15px;
-}
 p {
     font-size: 12px;
+}
+a {
+    text-decoration: none;
+}
+a:visited {
+    color: var(--primary-light);
 }
 button {
 	background: none;
@@ -49,10 +49,28 @@ button {
     border: 2px solid var(--clr-primary);
     border-radius: 5px;
 }
+.btn:hover, .btn:active {
+    background-color: var(--clr-primary);
+    color: var(--clr-background);
+}
 section {
     margin: 15px 8px;
     padding: 0 10px;
 }
 input {
     accent-color: var(--clr-check);
+}
+@media (min-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 20px;
+    }
 }
