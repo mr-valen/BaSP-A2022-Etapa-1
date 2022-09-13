@@ -51,7 +51,6 @@ main>section:first-child, main>section:last-child {
 }
 .services-section img {
     height: 95px;
-    margin: 0 10px;
 }
 .services-section h3, .services-section p {
     text-align: left;
@@ -64,18 +63,14 @@ main>section:first-child, main>section:last-child {
     padding: 12px 0 0 10px;
     font-weight: 100;
 }
-.why-section {
-    padding: 0 20px 0 10px;
-}
 .why-section img, .why-section input {
     display: none;
 }
 .why-section article {
-    margin: 20px 0;
+    margin: 10px 0;
     border-bottom: 1px solid var(--clr-primary);
 }
 .why-section article:last-child {
-    margin: 20px 0 0 0;
     border-bottom: none
 }
 .why-section>article h3 {
@@ -148,6 +143,10 @@ main>section:first-child, main>section:last-child {
     min-width: 60px;
     max-width: 100px;
 }
+.story-section {
+    margin-top: 0;
+    padding-top: 0;
+}
 .story-section h3 {
     margin-bottom: 10px;
     font-weight: 400;
@@ -164,6 +163,9 @@ main>section:first-child, main>section:last-child {
     margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid var(--clr-primary);
+}
+.story-section article:last-child img {
+    display: none;
 }
 .list-section {
     padding: 0 60px 5px;
@@ -185,7 +187,7 @@ main>section:first-child, main>section:last-child {
     font-size: 8px;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 480px) and (max-width: 1024px) {
     .title-section {
         display: flex;
         flex-direction: column;
@@ -215,7 +217,6 @@ main>section:first-child, main>section:last-child {
         padding: 2% 4%;
     }
     .title-section img {
-        align-self: stretch;
         height: 100%;
         width: 50%;
         order: 1;
@@ -253,9 +254,79 @@ main>section:first-child, main>section:last-child {
     .why-section article {
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
+        max-height: 35vh;
+        padding-bottom: 10px;
     }
-    .why-section img {
-        width: 50%;
+    .why-section article>img {
         display: block;
+        order: 1;
+        object-fit: cover;
+        box-sizing: border-box;
+        height: 100%;
+        max-height: 35vh;
+        min-width: 50%;
+        max-width: 60%;
+        margin-left: auto;
+        padding: 5px;
+        border-radius: 10px;
+    }
+    .why-section article>h3 {
+        white-space: nowrap;
+        margin: 10px auto;
+    }
+    .why-section article>h3, .why-section article>div {
+        width: 45%;
+        margin: 0;
+        padding: 0;
+        height: 50%;
+    }
+    .why-section article>div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: fit-content;
+        margin-top: 20px;
+    }
+    .why-section article>div p {
+        height: 50%;
+        min-height: 110px;
+        margin-bottom: 10px;
+    }
+    .why-section article>div a {
+        max-width: fit-content;
+    }
+    .why-section article>div .btn {
+        margin: 10px 0 0 auto;
+    }
+
+    .request-section form {
+        padding: 10px 60px;
+    }
+    .request-section input#name, .request-section input#email {
+        height: 40px;
+    }
+    .story-section article {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-height: 35vh;
+        margin: 15px 0;
+    }
+    .story-section article h3, .story-section article p {
+        width: 65%;
+    }
+    .story-section article img {
+        width: 40%;
+        max-height: 180px;
+        object-fit: cover;
+        margin: auto;
+    }
+    .story-section article:last-child>img {
+        order: -1;
+        display: block;
+    }
+    .story-section article:last-child>p, .story-section article:last-child>h3 {
+        text-align: right;
     }
 }
