@@ -63,7 +63,7 @@ main>section:first-child, main>section:last-child {
     padding: 12px 0 0 10px;
     font-weight: 100;
 }
-.why-section img, .why-section input {
+.why-section img, .carousel-button {
     display: none;
 }
 .why-section article {
@@ -184,7 +184,7 @@ main>section:first-child, main>section:last-child {
     font-size: 8px;
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (min-width: 480px) {
     .title-section {
         display: flex;
         flex-direction: column;
@@ -289,7 +289,6 @@ main>section:first-child, main>section:last-child {
     .why-section article>div .btn {
         margin: 10px 0 0 auto;
     }
-
     .request-section form {
         padding: 10px 60px;
     }
@@ -341,4 +340,143 @@ main>section:first-child, main>section:last-child {
     }
 }
 @media (min-width: 1024px) {
+    .title-section {
+        height: 55vh;
+        padding-bottom: 40px;
+    }
+    .span-title {
+        display: inline;
+    }
+    .title-section h1, .title-section h3 {
+        text-align: left;
+    }
+    .title-section p {
+        margin-bottom: 10px;
+        line-height: 20px;
+    }
+    .title-section .btn {
+        margin: 0;
+        margin: auto 0 0 auto;
+        padding: 1% 2%;
+    }
+    .title-section img {
+        margin: auto;
+        object-fit: fill;
+        height: auto;
+    }
+    .services-section {
+        gap: 60px 0;
+        padding-bottom: 40px;
+    }
+    .services-section p {
+        font-size: 15px;
+    }
+    .why-section article {
+        border: 1px solid red;
+        width: 50px;
+        display: block;
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-height: fit-content;
+        padding-bottom: 0;
+    }
+    .why-section article>img {
+        display: block;
+        order: -1;
+        object-fit: cover;
+        box-sizing: border-box;
+        height: 100%;
+        max-height: 35vh;
+        width: 50%;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+    .why-section article>h3 {
+        white-space: wrap;
+        margin: 0;
+    }
+    .why-section article>h3, .why-section article>div {
+        width: fit-content;
+        margin: 0;
+        padding: 0;
+        height: fit-content;
+    }
+    .why-section article>div {
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .why-section article>div p {
+        height: fit-content;
+        min-height: 0;
+        margin-bottom: 0;
+    }
+    .why-section article>div .btn {
+        margin: 0;
+    }
+    /* .why-section{
+        position: relative;
+        width: 200%;
+        border: none;
+    }
+    .why-section>h2{
+        margin-bottom: 20px;
+    }
+    .why-section>article{
+        display: inline-block;
+        margin-right: 80px;
+    }
+    .why-section>article>h3{
+        margin-bottom: 5px;
+    }
+    .why-section>article>p{
+        max-width: 450px;
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    .why-section>article>a{
+        margin-left: 185px;
+    }
+    .why-section>article>img{
+        width: 450px;
+        margin-bottom: 25px;
+        border: 1px solid var(--clr-pm);
+        border-radius: 5px;
+    }
+    .carousel-button {
+        display: block;
+        position: absolute;
+        appearance: none;
+        cursor: pointer;
+        z-index: 1;
+        top: 50px;
+        width: 100px;
+        height: 450px;
+    }.carousel-left{
+        left: 0;
+    }
+    .carousel-right{
+        left: 45%;
+    }
+    .carousel-article{
+        transition: 0.6s;
+    }
+    .carousel-right:hover{
+        background: linear-gradient(to left, rgba(55, 56, 104, 0.3), rgba(255, 255, 255, 0));
+    }
+    .carousel-left:hover{
+        background: linear-gradient(to right, rgba(55, 56, 104, 0.3), rgba(255, 255, 255, 0))
+    } */
+    /* CASE 1 - left checked*/
+    /* .carousel-left:checked{
+        display: none;
+    } */
+    /* CASE 2 - right checked*/
+    /* .carousel-right:checked{
+        display: none;
+    }
+    .carousel-right:checked ~ .carousel-article{
+        -webkit-transform: translateX(-230%) ;
+        transform: translateX(-230%) ;
+    } */
 }
