@@ -49,3 +49,20 @@ header .btn-arrow {
         margin-top: 20px;
     }
 }
+@media (min-width: 1024px) {
+    header {
+        padding: 0 40px;
+    }
+    header>a img {
+        margin: 0;
+    }
+    header button {
+        display: none;
+    }
+    header ul {
+        padding: 0;
+    }
+    header li {
+        margin: 0;
+    }
+}

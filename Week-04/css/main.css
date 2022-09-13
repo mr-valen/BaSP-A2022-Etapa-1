@@ -340,3 +340,5 @@ main>section:first-child, main>section:last-child {
         margin: 20px 0;
     }
 }
+@media (min-width: 1024px) {
+}

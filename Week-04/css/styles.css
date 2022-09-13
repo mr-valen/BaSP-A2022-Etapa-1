@@ -94,3 +94,16 @@ input {
         font-size: 20px;
     }
 }
+
+@media (min-width: 1024px) {
+    .main-aside-container {
+        display: flex;
+        align-items: flex-start;
+    }
+    h4, a{
+        font-size: 15px;
+    }
+    p{
+        font-size: 12px;
+    }
+}
