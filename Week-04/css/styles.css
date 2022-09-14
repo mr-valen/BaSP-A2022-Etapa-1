@@ -12,9 +12,10 @@ html {
     height: auto;
     font-family: 'Roboto', sans-serif;
 }
-body>* {
+body {
     background-color: var(--clr-background);
-    color: var(--clr-primary)
+    color: var(--clr-primary);
+    overflow-x: hidden;
 }
 h1 {
     font-size: 25px;
