@@ -1,9 +1,9 @@
 # Become a Software Professional 2022 Radium Rocket
 <div align="center"><img src="./Week-02/img/logo.png"></div>
 
-<div align="center">[GitHub Pages](https://mr-valen.github.io/BaSP-A2022-Etapa-1/Week-04/index.html)</div>
+[GitHub Pages](https://mr-valen.github.io/BaSP-A2022-Etapa-1/Week-04/index.html)
 
-https://mr-valen.github.io/BaSP-A2022-Etapa-1/Week-04
+<div align="center">https://mr-valen.github.io/BaSP-A2022-Etapa-1/Week-04</div>
 
 ## Index
 * [Description](#description)
