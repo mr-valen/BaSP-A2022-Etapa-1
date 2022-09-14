@@ -120,23 +120,23 @@ main>section:first-child, main>section:last-child {
 .request-section form>div>label:nth-child(2n+7) {
     font-weight: 400;
 }
-.request-section form>div:nth-child(2) {
+.request-section .contact-message {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
     margin-top: 10px;
 }
-.request-section form>div:nth-child(2) label {
+.request-section .contact-message label {
     margin-right: auto;
 }
-.request-section form>div:nth-child(2) textarea {
+.request-section .contact-message textarea {
     border: 2px solid lightgrey;
     border-radius: 5px;
     font-family: inherit;
     color: var(--clr-primary-light);
 
 }
-.request-section form>div:nth-child(2) .btn {
+.request-section .contact-message .btn {
     text-transform: capitalize;
     margin-left: 10px;
     width: 20%;
@@ -374,9 +374,10 @@ main>section:first-child, main>section:last-child {
         font-size: 15px;
     }
     .why-section {
-        width: 200%;
         position: relative;
-        overflow: hidden;
+        height: 100%;
+        width: 200%;
+        overflow: hidden!important;
     }
     .why-section .articles-container {
         display: flex;
@@ -422,45 +423,57 @@ main>section:first-child, main>section:last-child {
     .why-section .carousel-left {
         left: -10px;
     }
-    .carousel-right {
+    .why-section .carousel-right {
         left: 44%;
     }
-    .carousel-right:hover {
+    .why-section .carousel-right:hover {
         background: linear-gradient(to left, rgba(55, 56, 104, 0.3), rgba(255, 255, 255, 0));
     }
-    .carousel-left:hover {
+    .why-section .carousel-left:hover {
         background: linear-gradient(to right, rgba(55, 56, 104, 0.3), rgba(255, 255, 255, 0))
     }
-    .carousel-left:checked {
+    .why-section .carousel-left:checked {
         display: none;
     }
-    .carousel-right:checked {
+    .why-section .carousel-right:checked {
         display: none;
     }
-    .carousel-right:checked ~ .articles-container{
+    .why-section .carousel-right:checked ~ .articles-container {
         -webkit-transform: translateX(-40%) ;
         transform: translateX(-40%) ;
     }
-    /* 
-    .carousel-button {
-        display: block;
-        position: absolute;
-        cursor: pointer;
-        z-index: 1;
-        top: 50px;
-        width: 100px;
-        height: 450px;
-    }.carousel-left{
-        left: 0;
+    .request-section form {
+        display: flex;
+        padding: 20px;
+        gap: 50px;
     }
-    .carousel-right{
-        left: 45%;
+    .request-section label, .request-section p{
+        font-size: 14px;
     }
-    .carousel-article{
-    }*/
-    /* CASE 1 - left checked*/
-    /* 
-    } */
-    /* CASE 2 - right checked*/
-    /* 
-     */
+    .request-section .contact-input, .request-section .contact-message {
+        margin: 0;
+        width: 50%;
+    }
+    .story-section article h3 {
+        font-size: 20px;
+    }
+    .story-section article:last-child {
+        transform: translateY(-30px);
+    }
+    .story-section article:last-child h3 {
+        text-align: left;
+    }
+    .story-section article:last-child p {
+        width: 100%;
+        text-align: left;
+    }
+    .story-section article:last-child img {
+        display: none;
+    }
+    .list-section {
+        padding: 10px 120px 10px 30px;
+    }
+    .list-section a {
+        font-size: 20px;
+    }
+}

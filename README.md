@@ -8,6 +8,7 @@
 * [Week 01](#week-01)
 * [Week 02](#week-02)
 * [Week 03](#week-03)
+* [Week 04](#week-04)
 * [Author](#author)
 
 ## Description
@@ -32,6 +33,12 @@
 On this week we worked on our individual projects adding styles with CSS's most basic properties, trying to achieve a pixel perfect appereance relative to Figma sheet.
  * 🧰 | `CSS` | `Git` | `GitHub` |
  * 🔨 | CSS: Landing page |
+
+## Week 04
+### 💪 Flexing them all
+After the introduce to CSS we started working on a responsive design, adapting our page to mobile, tablet and desktop screens.
+ * 🧰 | `CSS` | `Git` | `GitHub` |
+ * 🔨 | CSS: Responsive landing page |
 
  ## Author
  Created by Valentín Michilena [@mr-valen](https://github.com/mr-valen)

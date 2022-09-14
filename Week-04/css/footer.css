@@ -25,3 +25,11 @@ footer p {
         font-weight: 400;
     }
 }
+@media (min-width: 1024px) {
+    footer {
+        padding-left: 15%;
+    }
+    footer img {
+        width: 60px;
+    }
+}
