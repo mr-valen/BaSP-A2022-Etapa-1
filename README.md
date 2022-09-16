@@ -1,10 +1,6 @@
 # Become a Software Professional 2022 Radium Rocket
 <div align="center"><img src="./Week-02/img/logo.png"></div>
 
-[GitHub Pages](https://mr-valen.github.io/BaSP-A2022-Etapa-1/Week-04/index.html)
-
-<div align="center">https://mr-valen.github.io/BaSP-A2022-Etapa-1/Week-04</div>
-
 ## Index
 * [Description](#description)
 * [Week 01](#week-01)
@@ -15,7 +11,7 @@
 
 ## Description
  This repository is for a course project about a website called Trackgenix where you can to organize your team's projects and their respective times. The objective of this project is to get in touch with all layers of web development and to be able to create a website from scratch.
- * 🧰 Technologies and tools used: | `Slack` | `Figma` | `Visual Studio Code` | `HTML5` | `Git` | `GitHub` | `CSS` |
+ * 🧰 Technologies and tools used: | `Slack` | `Figma` | `Visual Studio Code` | `Git` | `GitHub` | `HTML5` | `CSS` | `JavaScript` |
  * 🔨 Advance on website: | UI Design: All site | HTML: Landing page |
 
 ## Week 01 
@@ -32,15 +28,24 @@
 
 ## Week 03
 ### 🤿 Diving into CSS Cascade
+[GitHub Pages](https://mr-valen.github.io/BaSP-A2022-Etapa-1/Week-03/index.html)
 On this week we worked on our individual projects adding styles with CSS's most basic properties, trying to achieve a pixel perfect appereance relative to Figma sheet.
  * 🧰 | `CSS` | `Git` | `GitHub` |
  * 🔨 | CSS: Landing page |
 
 ## Week 04
 ### 💪 Flexing them all
+[GitHub Pages](https://mr-valen.github.io/BaSP-A2022-Etapa-1/Week-04/index.html)
 After the introduce to CSS we started working on a responsive design, adapting our page to mobile, tablet and desktop screens.
  * 🧰 | `CSS` | `Git` | `GitHub` |
  * 🔨 | CSS: Responsive landing page |
+ 
+## Week 05
+### 💡 Introduction to Javascript Functions 
+[GitHub Pages](https://mr-valen.github.io/BaSP-A2022-Etapa-1/Week-05/index.html)
+After achieving a legible and well structured HTML and CSS we worked with Javascript on five exercise about it's principles.
+ * 🧰 | `JavaScript` | `Git` | `GitHub` |
+ * 🔨 | JavaScript: Exercises |
 
  ## Author
  Created by Valentín Michilena [@mr-valen](https://github.com/mr-valen)
