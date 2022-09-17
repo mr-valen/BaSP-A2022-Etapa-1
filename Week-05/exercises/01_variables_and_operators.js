@@ -1,5 +1,4 @@
 console.log("Exercise 01: Variables and operators.");
-console.log();
 var numA1 = 1;
 var numA2 = 2;
 console.log(numA1 + numA2);
