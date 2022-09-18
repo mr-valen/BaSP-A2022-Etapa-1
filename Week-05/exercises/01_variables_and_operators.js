@@ -1,10 +1,10 @@
 console.log("Exercise 01: Variables and operators.");
-var numA1 = 1;
-var numA2 = 2;
-console.log(numA1 + numA2);
-var stringB1 = "Spider";
-var stringB2 = "man";
+var x = 1;
+var y = 2;
+console.log(x + y);
+var stringA = "Spider";
+var stringB = "man";
 console.log(stringB1 + stringB2);
-var stringC1 = "Brhadaranyakopanishadvivekachudamani";
-var stringC2 = "Erreh Muñoz Castillo";
-console.log(stringC1.length + stringC2.length);
+var stringA = "Brhadaranyakopanishadvivekachudamani";
+var stringB = "Erreh Muñoz Castillo";
+console.log(stringA.length + stringB.length);
