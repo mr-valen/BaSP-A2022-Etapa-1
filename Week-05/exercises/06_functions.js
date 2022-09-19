@@ -4,37 +4,50 @@ function suma(a, b) {
 };
 var resultado = suma(2, 5);
 console.log(resultado);
+var test = validateInteger(2.444);
 function suma(a, b) {
-    if (typeof a !== 'number' || Number.isNaN(a) || typeof b !== 'number' || Number.isNaN(b)) {
+    if (isNaN(a) || isNaN(b) || typeof a !== 'number' || typeof b !== 'number') {
         alert("All inputs must be numbers.");
         return NaN;
     };
     return a + b;
 };
 function validateInteger(a) {
-    return (Number.isInteger(a));
+    return (parseFloat(a) | 0) === parseFloat(a);
 };
 function suma(a, b) {
-    if (typeof a !== 'number' || Number.isNaN(a) || typeof b !== 'number' || Number.isNaN(b)) {
+    if (isNaN(a) || isNaN(b) || typeof a !== 'number' || typeof b !== 'number') {
         alert("All inputs must be numbers.");
         return NaN;
     };
-    if (!validateInteger(a) || !validateInteger(b)) {
-        alert("Some numbers are not integers.");
-        return Math.round(a + b);
-    }
+    if (!validateInteger(a)) {
+        alert("First number is not an integer.");
+        return Math.round(a);
+    };
+    if (!validateInteger(b)) {
+        alert("Second number is not an integer.");
+        return Math.round(b);
+    };
     return a + b;
 };
 function suma(a, b) {
-    validation(a, b);
-    return Math.round(a + b);
-};
-function validation(a, b) {
-    if (typeof a !== 'number' || Number.isNaN(a) || typeof b !== 'number' || Number.isNaN(b)) {
+    if (isNaN(a) || isNaN(b) || typeof a !== 'number' || typeof b !== 'number') {
         alert("All inputs must be numbers.");
         return NaN;
     };
-    if (!validateInteger(a) || !validateInteger(b)) {
-        alert("Some numbers are not integers.");
-    }
+    var isInvalid = validation(a, b);
+    if (isInvalid) {
+        return isInvalid;
+    };
+    return a + b;
+};
+function validation(a, b) {
+    if (!validateInteger(a)) {
+        alert("First number is not an integer.");
+        return Math.round(a);
+    };
+    if (!validateInteger(b)) {
+        alert("Second number is not an integer.");
+        return Math.round(b);
+    };
 };
