@@ -46,6 +46,9 @@ header {
     }
 }
 @media (min-width: 1024px) {
+    .header-btn {
+        display: none;
+    }
     .header-logo {
         width: 35%;
     }

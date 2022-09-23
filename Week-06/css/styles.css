@@ -8,6 +8,9 @@
     --clr-success: #49A37B;
     --clr-check: #34636E;
 }
+* {
+    scroll-behavior: smooth;
+}
 body, main, .main-aside-container {
     display: flex;
     flex-direction: column;
