@@ -1,34 +1,42 @@
 window.onload = function () {
-    var inputEmail = document.getElementById("email-input");
-    inputEmail.addEventListener("blur", emailValidation);
-    inputEmail.addEventListener("focus", emailReset);
-    var inputPassword = document.getElementById("password-input");
-    inputPassword.addEventListener("blur", passwordValidation);
-    inputPassword.addEventListener("focus", passwordReset);
-}
+    var emailInput = document.getElementById("email-input");
+    emailInput.addEventListener("blur", emailValidation);
+    emailInput.addEventListener("focus", emailReset);
+    var passwordInput = document.getElementById("password-input");
+    passwordInput.addEventListener("blur", passwordValidation);
+    passwordInput.addEventListener("focus", passwordReset);
+    var submitButton = document.getElementById("submit-button");
+    submitButton.addEventListener("click", submitAlert);
+};
 function emailValidation() {
-    var inputEmail = document.getElementById("email-input");
+    var emailInput = document.getElementById("email-input");
     var feedbackEmail = document.getElementById("email-feedback");
     var feedbackP = document.createElement("p");
     var emailCondition = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-    if (!emailCondition.test(inputEmail.value)) {
+    if (!emailCondition.test(emailInput.value)) {
         feedbackP.innerText = "Invalid email.";
         feedbackP.classList.add("feedback-p-error");
         feedbackEmail.appendChild(feedbackP);
         feedbackEmail.classList.add("feedback-div-error");
     };
-    if (inputEmail.value.length == 0) emailReset();
-}
+    if (emailInput.value.length == 0) emailReset();
+};
 function emailReset() {
     var feedbackEmail = document.getElementById("email-feedback");
     feedbackEmail.innerHTML = "";
-    feedbackEmail.classList.remove('feedback-div-error');
-}
+    feedbackEmail.classList.remove("feedback-div-error");
+};
 function passwordValidation() {
-    var inputPassword = document.getElementById("password-input");
-    var passwordTry = inputPassword.value;
+    var passwordInput = document.getElementById("password-input");
+    var passwordTry = passwordInput.value;
     var feedbackPassword = document.getElementById("password-feedback");
     var feedbackP = document.createElement("p");
+    if (passwordTry.length < 8) {
+        feedbackP.innerText = "Password must contain at least 8 characters.";
+        feedbackPassword.appendChild(feedbackP);
+        feedbackPassword.classList.add("feedback-div-error");
+        return;
+    };
     var hasLetter = false;
     var hasNumber = false;
     var hasSpecialChar = false;
@@ -41,32 +49,36 @@ function passwordValidation() {
         feedbackP.innerText = "Password must contain at least a letter.";
         feedbackPassword.appendChild(feedbackP);
         feedbackPassword.classList.add("feedback-div-error");
+        return;
     };
     if (!hasNumber) {
         feedbackP.innerText = "Password must contain at least a number.";
         feedbackPassword.appendChild(feedbackP);
         feedbackPassword.classList.add("feedback-div-error");
+        return;
     };
     if (hasSpecialChar) {
         feedbackP.innerText = "Password mustn't contain special characters.";
         feedbackPassword.appendChild(feedbackP);
         feedbackPassword.classList.add("feedback-div-error");
+        return;
     };
-    if (inputPassword.value.length == 0) passwordReset();
-}
+    if (passwordInput.value.length == 0) passwordReset();
+};
 function passwordReset() {
     var feedbackPassword = document.getElementById("password-feedback");
     feedbackPassword.innerHTML = "";
-    feedbackPassword.classList.remove('feedback-div-error');
-}
-
-// function passwordValidation() {
-//     var alertP = document.createElement("p");
-//     var feedbackPassword = document.getElementById('password-feedback');
-//     var passwordTry = inputPassword.value;
-//     var hasLetter = false;
-//     var hasNumber = false;
-//     var hasSpecialChar = false;
-//     for (var i = 0; i < passwordTry.length; i++) {
-//     };  
-// };
+    feedbackPassword.classList.remove("feedback-div-error");
+};
+function submitAlert() {
+    var emailInput = document.getElementById("email-input");
+    var emailStatus = document.getElementById("email-feedback").firstChild;
+    var emailAnswer = "";
+    emailStatus? emailAnswer = "ERROR: " + emailStatus.innerHTML : emailAnswer = emailInput.value;
+    var passwordInput = document.getElementById("password-input");
+    var passwordStatus = document.getElementById("password-feedback").firstChild;
+    var passwordAnswer = "";
+    passwordStatus? passwordAnswer = "ERROR: " + passwordStatus.innerHTML : passwordAnswer = passwordInput.value;
+    var answer = emailAnswer + "\n" + passwordAnswer;
+    alert(answer);
+};
