@@ -56,7 +56,7 @@ Before using JavaScript on our page we worked on five exercise about JavaScript'
  
 ## Week 06
 ### 👑 Introduction to Javascript DOM Manipulation 
-[GitHub Pages](https://mr-valen.github.io/BaSP-A2022-Etapa-1/Week-06/index.html)
+[GitHub Pages](https://mr-valen.github.io/BaSP-A2022-Etapa-1/Week-06/views/index.html)
 
 Now that we learned about JavaScript we started working on the site by adding validations to the Login page.
  * 🧰 | `JavaScript` | `DOM Manipulation` | `Git` | `GitHub` |

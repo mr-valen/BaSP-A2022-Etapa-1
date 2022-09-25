@@ -9,38 +9,40 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
         <title>Trackgenix | A System to Track Team's Times and Projects</title>
-        <link rel="shortcut icon" href="/Week-06/img/logo-icon.ico" type="image/logo-icon">
-        <link rel="stylesheet" href="/Week-06/css/reset.css">
-        <link rel="stylesheet" href="/Week-06/css/styles.css">
-        <link rel="stylesheet" href="/Week-06/css/header.css">
-        <link rel="stylesheet" href="/Week-06/css/login.css">
-        <link rel="stylesheet" href="/Week-06/css/footer.css">
+        <link rel="shortcut icon" href="../img/logo-icon.ico" type="image/logo-icon">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/sidebar.css">
+        <link rel="stylesheet" href="../css/login.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <script src="../javascript/login.js"></script>
     </head>
     <body>
         <header>
             <div class="logo-social-container">
                 <a href="#Home" class="header-logo">
-                    <img src="/Week-06/img/logo.png" alt="Trackgenix Logo" class="logo-img">
+                    <img src="../img/logo.png" alt="Trackgenix Logo" class="logo-img">
                 </a>
                 <ul class="header-social">
                     <li>
                         <a href="http://" target="_blank">
-                            <img src="/Week-06/img/icon-header-twitter.png" alt="Twitter Icon">
+                            <img src="../img/icon-header-twitter.png" alt="Twitter Icon">
                         </a>
                     </li>
                     <li>
                         <a href="http://" target="_blank">
-                            <img src="/Week-06/img/icon-header-instagram.png" alt="Instagram Icon">
+                            <img src="../img/icon-header-instagram.png" alt="Instagram Icon">
                         </a>
                     </li>
                     <li>
                         <a href="http://" target="_blank">
-                            <img src="/Week-06/img/icon-header-linkedin.png" alt="LinkedIn Icon">
+                            <img src="../img/icon-header-linkedin.png" alt="LinkedIn Icon">
                         </a>
                     </li>
                     <li>
                         <a href="http://" target="_blank">
-                            <img src="/Week-06/img/icon-header-facebook.png" alt="Facebook Icon">
+                            <img src="../img/icon-header-facebook.png" alt="Facebook Icon">
                         </a>
                     </li>
                 </ul>
@@ -49,26 +51,115 @@
                 <div class="arrow"></div>
             </button>
         </header>
+        <div class="main-aside-container">
+            <aside>
+                <section>
+                    <ul class="aside-menu-list">
+                        <li>
+                            <h4>Menu</h4>
+                        </li>
+                        <li>
+                            <a href="../views/index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="../views/sign-up.html">Sign up</a>
+                        </li>
+                        <li>
+                            <a href="../views/login.html">Sign in</a>
+                        </li>
+                        <li>
+                            <a href=#about-us>About us</a>
+                        </li>
+                    </ul>
+                </section>
+                <h4>Get in touch</h4>
+                <p>
+                    Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, 
+                    ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum.
+                    Sed nulla amet lorem feugiat tempus aliquam.
+                </p>
+                <address class="aside-address">
+                    <ul class="aside-address-list">
+                        <li>
+                            <a href="">
+                                <img src="../img/icon-aside-phone.png" alt="Phone Icon">
+                                <p>
+                                    (000) 000-0000
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:information@untitled.tld">
+                                <img src="../img/icon-aside-email.png" alt="Email Icon">
+                                <p>
+                                    information@untitled.tld
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="../img/icon-aside-address.png" alt="Address Icon">
+                                <div>
+                                    <p>
+                                        1234 Somewhere Road #8254
+                                    </p>
+                                    <p>
+                                        Nashville, TN 00000-0000
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </address>
+            </aside>
+            <main>
+                <h1>Sign in</h1>
+                <form action="" class="login-form">
+                    <fieldset>
+                        <div class="email-div">
+                            <img src="../img/login-email.png" alt="Email Icon">
+                            <input type="text" id="email-input">
+                        </div>
+                        <div class="feedback-div" id="email-feedback"></div>
+                    </fieldset>
+                    <fieldset>
+                        <div class="password-div">
+                            <img src="../img/login-password.png" alt="Password Icon">
+                            <input type="password" id="password-input" autocomplete="off">
+                        </div>
+                        <div class="feedback-div" id="password-feedback"></div>
+                    </fieldset>
+                    <fieldset>
+                        <div class="remember-checkbox">
+                            <input type="checkbox" id="remember-checkbox">
+                            <p>Remember me</p>
+                        </div>
+                    </fieldset>
+                    <button class="login-submit">Continue</button>
+                </form>
+                <a href="">Don't you remember your password?</a>
+            </main>
+        </div>
         <footer>
             <ul class="footer-social-ul">
                 <li>
                     <a href="">
-                        <img src="/Week-06/img/icon-footer-twitter.png" alt="Twitter Icon" class="footer-social-img">
+                        <img src="../img/icon-footer-twitter.png" alt="Twitter Icon" class="footer-social-img">
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <img src="/Week-06/img/icon-footer-instagram.png" alt="Instragram Icon" class="footer-social-img">
+                        <img src="../img/icon-footer-instagram.png" alt="Instragram Icon" class="footer-social-img">
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <img src="/Week-06/img/icon-footer-linkedin.png" alt="LinkedIn Icon" class="footer-social-img">
+                        <img src="../img/icon-footer-linkedin.png" alt="LinkedIn Icon" class="footer-social-img">
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <img src="/Week-06/img/icon-footer-facebook.png" alt="Facebook Icon" class="footer-social-img">
+                        <img src="../img/icon-footer-facebook.png" alt="Facebook Icon" class="footer-social-img">
                     </a>
                 </li>
             </ul>

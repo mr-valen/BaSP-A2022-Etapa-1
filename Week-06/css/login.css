@@ -1,0 +1,75 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    padding: 30px 0;
+    margin: 2% auto;
+    box-shadow: 1px 1px 5px 2px grey;
+}
+main h1 {
+    margin-bottom: 60px;
+}
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+.login-form input[type=text], .login-form input[type=password], .remember-checkbox p {
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    width: 50%;
+}
+.login-form fieldset {
+    width: 100%;
+}
+.email-div, .password-div, .remember-checkbox, .feedback-div {
+    display: flex;
+    justify-content: flex-start;
+    height: 40px;
+}
+.feedback-div {
+    margin-top: 3px;
+    border-top: 1px solid var(--clr-primary);
+}
+.feedback-div p {
+    padding: 5px 0 0 5px;
+    white-space: nowrap;
+}
+.feedback-div-error {
+    border-top: 1px solid var(--clr-alert);
+    color: var(--clr-alert);
+}
+.login-form img, .login-form input[type=checkbox] {
+    display: flex;
+    width: 40px;
+    margin: 0;
+}
+.remember-checkbox p, #email-input, #password-input {
+    width: 100%;
+    padding: 10px 5%;
+    color: var(--clr-primary);
+    font-weight: 400;
+    font-size: calc(8px + .9vw);
+}
+.login-form input[type=checkbox] {
+    accent-color: var(--clr-secondary);
+}
+.login-submit {
+    width: 80%;
+    height: 40px;
+    margin: 40px 0;
+    color: var(--clr-primary);
+    background: var(--clr-secondary);
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    border-radius: 5px;
+    border: none;
+}
+@media (min-width: 480px) {
+    main {
+        max-width: 500px;
+    }
+}
