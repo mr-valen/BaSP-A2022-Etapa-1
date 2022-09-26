@@ -1,4 +1,4 @@
-window.onload = function () {
+window.onload = function() {
     var emailInput = document.getElementById("email-input");
     emailInput.addEventListener("blur", emailValidation);
     emailInput.addEventListener("focus", emailReset);
@@ -13,13 +13,15 @@ function emailValidation() {
     var feedbackEmail = document.getElementById("email-feedback");
     var feedbackP = document.createElement("p");
     var emailCondition = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+    if (emailInput.value.length == 0) {
+        return;
+    };
     if (!emailCondition.test(emailInput.value)) {
         feedbackP.innerText = "Invalid email.";
         feedbackP.classList.add("feedback-p-error");
         feedbackEmail.appendChild(feedbackP);
         feedbackEmail.classList.add("feedback-div-error");
     };
-    if (emailInput.value.length == 0) emailReset();
 };
 function emailReset() {
     var feedbackEmail = document.getElementById("email-feedback");
@@ -31,6 +33,9 @@ function passwordValidation() {
     var passwordTry = passwordInput.value;
     var feedbackPassword = document.getElementById("password-feedback");
     var feedbackP = document.createElement("p");
+    if (passwordInput.value.length == 0) {
+        return;
+    };
     if (passwordTry.length < 8) {
         feedbackP.innerText = "Password must contain at least 8 characters.";
         feedbackPassword.appendChild(feedbackP);
@@ -63,14 +68,14 @@ function passwordValidation() {
         feedbackPassword.classList.add("feedback-div-error");
         return;
     };
-    if (passwordInput.value.length == 0) passwordReset();
 };
 function passwordReset() {
     var feedbackPassword = document.getElementById("password-feedback");
     feedbackPassword.innerHTML = "";
     feedbackPassword.classList.remove("feedback-div-error");
 };
-function submitAlert() {
+function submitAlert(e) {
+    e.preventDefault();
     var emailInput = document.getElementById("email-input");
     var emailStatus = document.getElementById("email-feedback").firstChild;
     var emailAnswer = "";
@@ -79,6 +84,8 @@ function submitAlert() {
     var passwordStatus = document.getElementById("password-feedback").firstChild;
     var passwordAnswer = "";
     passwordStatus? passwordAnswer = "ERROR: " + passwordStatus.innerHTML : passwordAnswer = passwordInput.value;
+    if (!emailInput.value) emailAnswer = "ERROR: Empty email field.";
+    if (!passwordInput.value) passwordAnswer = "ERROR: Empty password field.";
     var answer = emailAnswer + "\n" + passwordAnswer;
     alert(answer);
 };
