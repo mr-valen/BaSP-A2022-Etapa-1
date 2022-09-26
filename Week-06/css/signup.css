@@ -10,9 +10,11 @@ main {
 h1 {
     margin-bottom: 10px;
 }
-legend {
+legend, p {
     font-size: calc(12px + .4vw);
     font-weight: 500;
+}
+legend {
     margin-bottom: 5px;
 }
 .signup-form {
@@ -26,13 +28,12 @@ legend {
     flex-direction: column;
     padding: 0 5%;
 }
-.signup-form input{
+.signup-input{
     box-sizing: border-box;
     height: 30px;
     margin-bottom: 1%;
     border: 1px solid var(--clr-primary);
     border-radius: 4px;
-    outline: none;
     color: var(--clr-primary);
     font-size: calc(8px + 0.6vw);
 }
@@ -50,6 +51,16 @@ legend {
     border-radius: 5px;
     border: none;
     cursor: pointer;
+}
+.input-error {
+    border: 2px solid var(--clr-alert);
+    color: var(--clr-alert);
+}
+.feedback-p-error {
+    max-width: 100%;
+    white-space: nowrap;
+    color: var(--clr-alert);
+    font-weight: 400;
 }
 @media (min-width: 480px) {
     main {
