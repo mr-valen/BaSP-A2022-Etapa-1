@@ -1,4 +1,5 @@
 window.onload = function() {
+    document.getElementsByClassName("login-input");
     var emailInput = document.getElementById("email-input");
     emailInput.addEventListener("blur", emailValidation);
     emailInput.addEventListener("focus", emailReset);
@@ -7,6 +8,11 @@ window.onload = function() {
     passwordInput.addEventListener("focus", passwordReset);
     var submitButton = document.getElementById("submit-button");
     submitButton.addEventListener("click", submitAlert);
+};
+function inputHandler(input) {
+    if (input = "email-input") {
+        
+    }
 };
 function emailValidation() {
     var emailInput = document.getElementById("email-input");
@@ -33,7 +39,7 @@ function passwordValidation() {
     var passwordTry = passwordInput.value;
     var feedbackPassword = document.getElementById("password-feedback");
     var feedbackP = document.createElement("p");
-    if (passwordInput.value.length == 0) {
+    if (passwordTry.length == 0) {
         return;
     };
     if (passwordTry.length < 8) {
@@ -48,7 +54,7 @@ function passwordValidation() {
     for (var i = 0; i < passwordTry.length; i++) {
         if (isNaN(parseInt(passwordTry[i]))) hasLetter = true;
         if (!isNaN(parseInt(passwordTry[i]))) hasNumber = true;
-        if ((passwordTry[i].charCodeAt() > 32 && passwordTry[i].charCodeAt() < 48)) hasSpecialChar = true;
+        if ((passwordTry[i].charCodeAt() > 32 && passwordTry[i].charCodeAt() < 48) || passwordTry[i] == " ") hasSpecialChar = true;
     };
     if (!hasLetter) {
         feedbackP.innerText = "Password must contain at least a letter.";
