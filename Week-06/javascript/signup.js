@@ -464,8 +464,18 @@ function submitAlert(e) {
     var repeatPasswordAnswer = "";
     repeatPasswordStatus? repeatPasswordAnswer = "ERROR: " + repeatPasswordStatus.innerHTML : repeatPasswordAnswer = repeatPasswordInput.value;
 
+    if (!firstNameInput.value) firstNameAnswer = "ERROR: Empty first name field.";
+    if (!lastNameInput.value) lastNameAnswer = "ERROR: Empty last name field.";
+    if (!dniInput.value) dniAnswer = "ERROR: Empty DNI field.";
+    if (!birthDateInput.value) birthDateAnswer = "ERROR: Empty birth date field.";
+    if (!phoneInput.value) phoneAnswer = "ERROR: Empty phone field.";
+    if (!addressInput.value) addressAnswer = "ERROR: Empty address field.";
+    if (!localityInput.value) localityAnswer = "ERROR: Empty locality field.";
+    if (!postalInput.value) postalAnswer = "ERROR: Empty postal field.";
     if (!emailInput.value) emailAnswer = "ERROR: Empty email field.";
+    if (!repeatEmailInput.value) repeatEmailAnswer = "ERROR: Empty repetead email field.";
     if (!passwordInput.value) passwordAnswer = "ERROR: Empty password field.";
-    var answer = emailAnswer + "\n" + passwordAnswer;
+    if (!passwordInput.value) repeatPasswordAnswer = "ERROR: Empty repeated password field.";
+    var answer = firstNameAnswer + "\n" + lastNameAnswer + "\n" + dniAnswer + "\n" + birthDateAnswer + "\n" + phoneAnswer + "\n" + addressAnswer + "\n" + localityAnswer + "\n" + postalAnswer + "\n" + emailAnswer + "\n" + repeatEmailAnswer + "\n" + passwordAnswer + "\n" + repeatPasswordAnswer;
     alert(answer);
 };
