@@ -35,6 +35,8 @@ window.onload = function() {
     var repeatPasswordInput = document.getElementById("repeatpassword-input");
     repeatPasswordInput.addEventListener("blur", repeatPasswordValidation);
     repeatPasswordInput.addEventListener("focus", repeatPasswordReset);
+    var submitButton = document.getElementById("submit-button");
+    submitButton.addEventListener("click", submitAlert);
 };
 function firstNameValidation() {
     var firstNameInput = document.getElementById("firstname-input");
@@ -330,7 +332,7 @@ function passwordValidation() {
         return;
     };
     if (passwordTry.length < 8) {
-        feedbackP.innerText = "Password must contain at least 8 characters.";
+        feedbackP.innerText = "It must contain at least 8 characters.";
         feedbackP.classList.add("feedback-p-error");
         feedbackPassword.appendChild(feedbackP);
         feedbackPassword.classList.add("feedback-div-error");
@@ -346,7 +348,7 @@ function passwordValidation() {
         if ((passwordTry[i].charCodeAt() > 32 && passwordTry[i].charCodeAt() < 48) || passwordTry[i] == " ") hasSpecialChar = true;
     };
     if (!hasLetter) {
-        feedbackP.innerText = "Password must contain at least a letter.";
+        feedbackP.innerText = "It must contain at least a letter.";
         feedbackP.classList.add("feedback-p-error");
         feedbackPassword.appendChild(feedbackP);
         feedbackPassword.classList.add("feedback-div-error");
@@ -354,7 +356,7 @@ function passwordValidation() {
         return;
     };
     if (!hasNumber) {
-        feedbackP.innerText = "Password must contain at least a number.";
+        feedbackP.innerText = "It must contain at least a number.";
         feedbackP.classList.add("feedback-p-error");
         feedbackPassword.appendChild(feedbackP);
         feedbackPassword.classList.add("feedback-div-error");
@@ -399,4 +401,71 @@ function repeatPasswordReset() {
     feedbackRepeatPassword.innerHTML = "";
     feedbackRepeatPassword.classList.remove("feedback-div-error");
     repeatPasswordInput.classList.remove("input-error");
+};
+function submitAlert(e) {
+    e.preventDefault();
+    var firstNameInput = document.getElementById("firstname-input");
+    var firstNameStatus = document.getElementById("firstname-feedback").firstChild;
+    var firstNameAnswer = "";
+    firstNameStatus? firstNameAnswer = "ERROR: " + firstNameStatus.innerHTML : firstNameAnswer = firstNameInput.value;
+
+    var lastNameInput = document.getElementById("lastname-input");
+    var lastNameStatus = document.getElementById("lastname-feedback").firstChild;
+    var lastNameAnswer = "";
+    lastNameStatus? lastNameAnswer = "ERROR: " + lastNameStatus.innerHTML : lastNameAnswer = lastNameInput.value;
+
+    var dniInput = document.getElementById("dni-input");
+    var dniStatus = document.getElementById("dni-feedback").firstChild;
+    var dniAnswer = "";
+    dniStatus? dniAnswer = "ERROR: " + dniStatus.innerHTML : dniAnswer = dniInput.value;
+
+    var birthDateInput = document.getElementById("birthdate-input");
+    var birthDateStatus = document.getElementById("birthdate-feedback").firstChild;
+    var birthDateAnswer = "";
+    birthDateStatus? birthDateAnswer = "ERROR: " + birthDateStatus.innerHTML : birthDateAnswer = birthDateInput.value;
+
+    var phoneInput = document.getElementById("phone-input");
+    var phoneStatus = document.getElementById("phone-feedback").firstChild;
+    var phoneAnswer = "";
+    phoneStatus? phoneAnswer = "ERROR: " + phoneStatus.innerHTML : phoneAnswer = phoneInput.value;
+
+    var addressInput = document.getElementById("address-input");
+    var addressStatus = document.getElementById("address-feedback").firstChild;
+    var addressAnswer = "";
+    addressStatus? addressAnswer = "ERROR: " + addressStatus.innerHTML : addressAnswer = addressInput.value;
+
+    var localityInput = document.getElementById("locality-input");
+    var localityStatus = document.getElementById("locality-feedback").firstChild;
+    var localityAnswer = "";
+    localityStatus? localityAnswer = "ERROR: " + localityStatus.innerHTML : localityAnswer = localityInput.value;
+
+    var postalInput = document.getElementById("postal-input");
+    var postalStatus = document.getElementById("postal-feedback").firstChild;
+    var postalAnswer = "";
+    postalStatus? postalAnswer = "ERROR: " + postalStatus.innerHTML : postalAnswer = postalInput.value;
+
+    var emailInput = document.getElementById("email-input");
+    var emailStatus = document.getElementById("email-feedback").firstChild;
+    var emailAnswer = "";
+    emailStatus? emailAnswer = "ERROR: " + emailStatus.innerHTML : emailAnswer = emailInput.value;
+
+    var repeatEmailInput = document.getElementById("repeatemail-input");
+    var repeatEmailStatus = document.getElementById("repeatemail-feedback").firstChild;
+    var repeatEmailAnswer = "";
+    repeatEmailStatus? repeatEmailAnswer = "ERROR: " + repeatEmailStatus.innerHTML : repeatEmailAnswer = repeatEmailInput.value;
+
+    var passwordInput = document.getElementById("password-input");
+    var passwordStatus = document.getElementById("password-feedback").firstChild;
+    var passwordAnswer = "";
+    passwordStatus? passwordAnswer = "ERROR: " + passwordStatus.innerHTML : passwordAnswer = passwordInput.value;
+
+    var repeatPasswordInput = document.getElementById("repeatpassword-input");
+    var repeatPasswordStatus = document.getElementById("repeatpassword-feedback").firstChild;
+    var repeatPasswordAnswer = "";
+    repeatPasswordStatus? repeatPasswordAnswer = "ERROR: " + repeatPasswordStatus.innerHTML : repeatPasswordAnswer = repeatPasswordInput.value;
+
+    if (!emailInput.value) emailAnswer = "ERROR: Empty email field.";
+    if (!passwordInput.value) passwordAnswer = "ERROR: Empty password field.";
+    var answer = emailAnswer + "\n" + passwordAnswer;
+    alert(answer);
 };
