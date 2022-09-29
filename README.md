@@ -58,6 +58,8 @@ Before using JavaScript on our page we worked on five exercise about JavaScript'
 ### 👑 DOM Manipulation, the basics
 [GitHub Pages](https://mr-valen.github.io/BaSP-A2022-Etapa-1/Week-06/views/index.html)
 
+[Requeriment Validations](https://docs.google.com/document/d/1shSMdqbjs1Z8MgemvnrWqU2IU2zt1X7F3AfY3f0ytiA/edit)
+
 Now that we learned about JavaScript we started working on the site by adding validations to the Login page.
  * 🧰 | `JavaScript` | `DOM Manipulation` | `Git` | `GitHub` |
  * 🔨 | JavaScript: Validations with DOM |
