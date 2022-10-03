@@ -7,7 +7,7 @@ window.onload = function() {
     passwordInput.addEventListener("blur", passwordValidation);
     passwordInput.addEventListener("focus", passwordReset);
     var submitButton = document.getElementById("submit-button");
-    submitButton.addEventListener("click", submitAlert);
+    submitButton.addEventListener("click", submitForm);
 };
 function emailValidation() {
     var emailInput = document.getElementById("email-input");
@@ -75,18 +75,29 @@ function passwordReset() {
     feedbackPassword.innerHTML = "";
     feedbackPassword.classList.remove("feedback-div-error");
 };
-function submitAlert(e) {
+function submitForm(e) {
     e.preventDefault();
-    var emailInput = document.getElementById("email-input");
+    var email = document.getElementById("email-input").value;
+    var password = document.getElementById("password-input").value;
+    var url = "https://basp-m2022-api-rest-server.herokuapp.com/login?email=" 
+    + email + "&password=" + password;
     var emailStatus = document.getElementById("email-feedback").firstChild;
-    var emailAnswer = "";
-    emailStatus? emailAnswer = "ERROR: " + emailStatus.innerHTML : emailAnswer = emailInput.value;
-    var passwordInput = document.getElementById("password-input");
     var passwordStatus = document.getElementById("password-feedback").firstChild;
-    var passwordAnswer = "";
-    passwordStatus? passwordAnswer = "ERROR: " + passwordStatus.innerHTML : passwordAnswer = passwordInput.value;
-    if (!emailInput.value) emailAnswer = "ERROR: Empty email field.";
-    if (!passwordInput.value) passwordAnswer = "ERROR: Empty password field.";
-    var answer = emailAnswer + "\n" + passwordAnswer;
-    alert(answer);
+    if (!emailStatus && !passwordStatus){
+        fetch(url)
+            .then(function (response){
+                return response.json();
+            })
+            .then(function (data){
+                if(data !== "Success") {
+                    alert(data.msg);
+                    throw new Error("There was an error with the request")
+                };
+                alert(data.msg);
+            })
+            .catch(function(error){
+                console.log(error)
+            })
+    };
+    alert("ERROR: " + emailStatus.innerText + "\n" + "ERROR: " + passwordStatus.innerText);
 };

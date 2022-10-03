@@ -9,40 +9,40 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
         <title>Trackgenix | A System to Track Team's Times and Projects</title>
-        <link rel="shortcut icon" href="../img/logo-icon.ico" type="image/logo-icon">
+        <link rel="shortcut icon" href="../assets/logo-icon.ico" type="image/logo-icon">
         <link rel="stylesheet" href="../css/reset.css">
         <link rel="stylesheet" href="../css/styles.css">
         <link rel="stylesheet" href="../css/header.css">
         <link rel="stylesheet" href="../css/sidebar.css">
-        <link rel="stylesheet" href="../css/signup.css">
+        <link rel="stylesheet" href="../css/login.css">
         <link rel="stylesheet" href="../css/footer.css">
-        <script src="../javascript/signup.js"></script>
+        <script src="../javascript/login.js"></script>
     </head>
     <body>
         <header>
             <div class="logo-social-container">
                 <a href="#Home" class="header-logo">
-                    <img src="../img/logo.png" alt="Trackgenix Logo" class="logo-img">
+                    <img src="../assets/logo.png" alt="Trackgenix Logo" class="logo-img">
                 </a>
                 <ul class="header-social">
                     <li>
                         <a href="http://" target="_blank">
-                            <img src="../img/icon-header-twitter.png" alt="Twitter Icon">
+                            <img src="../assets/icon-header-twitter.png" alt="Twitter Icon">
                         </a>
                     </li>
                     <li>
                         <a href="http://" target="_blank">
-                            <img src="../img/icon-header-instagram.png" alt="Instagram Icon">
+                            <img src="../assets/icon-header-instagram.png" alt="Instagram Icon">
                         </a>
                     </li>
                     <li>
                         <a href="http://" target="_blank">
-                            <img src="../img/icon-header-linkedin.png" alt="LinkedIn Icon">
+                            <img src="../assets/icon-header-linkedin.png" alt="LinkedIn Icon">
                         </a>
                     </li>
                     <li>
                         <a href="http://" target="_blank">
-                            <img src="../img/icon-header-facebook.png" alt="Facebook Icon">
+                            <img src="../assets/icon-header-facebook.png" alt="Facebook Icon">
                         </a>
                     </li>
                 </ul>
@@ -82,7 +82,7 @@
                     <ul class="aside-address-list">
                         <li>
                             <a href="">
-                                <img src="../img/icon-aside-phone.png" alt="Phone Icon">
+                                <img src="../assets/icon-aside-phone.png" alt="Phone Icon">
                                 <p>
                                     (000) 000-0000
                                 </p>
@@ -90,7 +90,7 @@
                         </li>
                         <li>
                             <a href="mailto:information@untitled.tld">
-                                <img src="../img/icon-aside-email.png" alt="Email Icon">
+                                <img src="../assets/icon-aside-email.png" alt="Email Icon">
                                 <p>
                                     information@untitled.tld
                                 </p>
@@ -98,7 +98,7 @@
                         </li>
                         <li>
                             <a href="">
-                                <img src="../img/icon-aside-address.png" alt="Address Icon">
+                                <img src="../assets/icon-aside-address.png" alt="Address Icon">
                                 <div>
                                     <p>
                                         1234 Somewhere Road #8254
@@ -113,92 +113,53 @@
                 </address>
             </aside>
             <main>
-                <h1>Register</h1>
-                <form action="" class="signup-form">
+                <h1>Sign in</h1>
+                <form action="" class="login-form">
                     <fieldset>
-                        <legend>First Name</legend>
-                        <input type="text" class="signup-input" id="firstname-input">
-                        <div class="feedback-div" id="firstname-feedback"></div>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Last Name</legend>
-                        <input type="text" class="signup-input" id="lastname-input">
-                        <div class="feedback-div" id="lastname-feedback"></div>
-                    </fieldset>
-                    <fieldset>
-                        <legend>DNI</legend>
-                        <input type="text" class="signup-input" id="dni-input">
-                        <div class="feedback-div" id="dni-feedback"></div>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Birth Date</legend>
-                        <input type="date" class="signup-input" id="birthdate-input">
-                        <div class="feedback-div" id="birthdate-feedback"></div>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Phone Number</legend>
-                        <input type="text" class="signup-input" id="phone-input">
-                        <div class="feedback-div" id="phone-feedback"></div>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Address</legend>
-                        <input type="text" class="signup-input" id="address-input">
-                        <div class="feedback-div" id="address-feedback"></div>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Locality</legend>
-                        <input type="text" class="signup-input" id="locality-input">
-                        <div class="feedback-div" id="locality-feedback"></div>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Postal Code</legend>
-                        <input type="text" class="signup-input" id="postal-input">
-                        <div class="feedback-div" id="postal-feedback"></div>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Email</legend>
-                        <input type="text" class="signup-input" id="email-input">
+                        <div class="email-div">
+                            <img src="../assets/login-email.png" alt="Email Icon">
+                            <input type="text" class="login-input" id="email-input">
+                        </div>
                         <div class="feedback-div" id="email-feedback"></div>
                     </fieldset>
                     <fieldset>
-                        <legend>Repeat Email</legend>
-                        <input type="text" class="signup-input" id="repeatemail-input">
-                        <div class="feedback-div" id="repeatemail-feedback"></div>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Password</legend>
-                        <input type="password" class="signup-input" id="password-input">
+                        <div class="password-div">
+                            <img src="../assets/login-password.png" alt="Password Icon">
+                            <input type="password" class="login-input" id="password-input" autocomplete="off">
+                        </div>
                         <div class="feedback-div" id="password-feedback"></div>
                     </fieldset>
                     <fieldset>
-                        <legend>Repeat Password</legend>
-                        <input type="password" class="signup-input" id="repeatpassword-input">
-                        <div class="feedback-div" id="repeatpassword-feedback"></div>
+                        <div class="remember-checkbox">
+                            <input type="checkbox" id="remember-checkbox">
+                            <p>Remember me</p>
+                        </div>
                     </fieldset>
-                    <input type="submit" value="Continue" class="signup-submit" id="submit-button">
+                    <input type="submit" value="Continue" class="login-submit" id="submit-button">
                 </form>
+                <a href="">Don't you remember your password?</a>
             </main>
         </div>
         <footer>
             <ul class="footer-social-ul">
                 <li>
                     <a href="">
-                        <img src="../img/icon-footer-twitter.png" alt="Twitter Icon" class="footer-social-img">
+                        <img src="../assets/icon-footer-twitter.png" alt="Twitter Icon" class="footer-social-img">
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <img src="../img/icon-footer-instagram.png" alt="Instragram Icon" class="footer-social-img">
+                        <img src="../assets/icon-footer-instagram.png" alt="Instragram Icon" class="footer-social-img">
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <img src="../img/icon-footer-linkedin.png" alt="LinkedIn Icon" class="footer-social-img">
+                        <img src="../assets/icon-footer-linkedin.png" alt="LinkedIn Icon" class="footer-social-img">
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <img src="../img/icon-footer-facebook.png" alt="Facebook Icon" class="footer-social-img">
+                        <img src="../assets/icon-footer-facebook.png" alt="Facebook Icon" class="footer-social-img">
                     </a>
                 </li>
             </ul>

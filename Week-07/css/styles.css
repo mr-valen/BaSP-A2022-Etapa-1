@@ -1,0 +1,85 @@
+:root {
+    --clr-background: #FFFFFF;
+    --clr-primary: #373867;
+    --clr-primary-light: #37386766;
+    --clr-secondary: #aace9b;
+    --clr-secondary-light: #aace9b66;
+    --clr-alert: #F33413;
+    --clr-success: #49A37B;
+    --clr-check: #34636E;
+}
+* {
+    scroll-behavior: smooth;
+}
+body, main, .main-aside-container {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    color: var(--clr-primary);
+}
+header, footer, .main-aside-container {
+    width: 100%;
+}
+aside {
+    display: none;
+}
+h1 {
+    font-size: calc(12px + 2vw);
+}
+h2 {
+    font-size: calc(11px + 1.5vw);
+    font-weight: 700;
+}
+h3 {
+    font-size: calc(10px + 1vw);
+    font-weight: 700;
+    white-space: nowrap;
+}
+h4 {
+    font-size: calc(8px + 1vw);
+}
+p {
+    font-size: calc(8px + .9vw);
+    font-weight: 200;
+}
+h2, h4 {
+    text-transform: uppercase;
+}
+img {
+    width: 100%;
+}
+.btn {
+    padding: 1.2% 3.5%;
+    border: 2px solid var(--clr-primary);
+    border-radius: 5px;
+    font-size: calc(8px + .6vw);
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--clr-primary);
+    cursor: pointer;
+}
+.btn:hover, .btn:active {
+    color: var(--clr-background);
+    background-color: var(--clr-primary);
+}
+.btn:visited {
+    color: var(--clr-primary);
+}
+.btn:visited:hover {
+    color: var(--clr-background);
+}
+@media (min-width: 1024px) {
+    .main-aside-container {
+        flex-direction: row;
+    }
+    main {
+        width: 85%;
+    }
+    aside {
+        display: flex;
+        width: 15%;
+    }
+    h1 {
+        white-space: nowrap;
+    }
+}
