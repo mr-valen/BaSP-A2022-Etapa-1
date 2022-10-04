@@ -49,7 +49,8 @@ function passwordValidation() {
     for (var i = 0; i < passwordTry.length; i++) {
         if (isNaN(parseInt(passwordTry[i]))) hasLetter = true;
         if (!isNaN(parseInt(passwordTry[i]))) hasNumber = true;
-        if ((passwordTry[i].charCodeAt() > 32 && passwordTry[i].charCodeAt() < 48) || passwordTry[i] == " ") hasSpecialChar = true;
+        if ((passwordTry[i].charCodeAt() > 32 && passwordTry[i].charCodeAt() < 48)
+        || passwordTry[i] == " ") hasSpecialChar = true;
     };
     if (!hasLetter) {
         feedbackP.innerText = "Password must contain at least a letter.";
