@@ -463,14 +463,24 @@ function submit(e) {
                     for (var error of data.errors) {
                         message += "* " + error.msg + "\n"
                     }
-                    alert("Oops, something is wrong: \n" + message)
+                    alert("There is one or more errors: \n" + message)
                     throw new Error("There was an error with the request.");
                 };
             })
-            .catch(function(error){
+            .catch(function(error) {
                 console.log(error);
             })
-    };
+    } else {
+        var feedbacks = document.getElementsByClassName("feedback-div");
+        var answer = "There is one or more errors: \n"
+        for (const feedback of feedbacks) {
+            if (feedback.innerText) {
+                var title = feedback.parentElement.getElementsByTagName("legend")[0].innerText;
+                answer += title + ": " + feedback.innerText + "\n";
+            };
+        };
+        alert(answer);
+    }
 };
     // var firstNameAnswer = "";
     // firstNameStatus? firstNameAnswer = "ERROR: " + firstNameStatus.innerHTML : firstNameAnswer = firstNameInput.value;
