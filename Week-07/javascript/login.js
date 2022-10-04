@@ -2,12 +2,17 @@ window.onload = function() {
     document.getElementsByClassName("login-input");
     var emailInput = document.getElementById("email-input");
     emailInput.addEventListener("blur", emailValidation);
-    emailInput.addEventListener("focus", emailReset);
+    emailInput.addEventListener("focus", reset);
     var passwordInput = document.getElementById("password-input");
     passwordInput.addEventListener("blur", passwordValidation);
-    passwordInput.addEventListener("focus", passwordReset);
+    passwordInput.addEventListener("focus", reset);
     var submitButton = document.getElementById("submit-button");
     submitButton.addEventListener("click", submitForm);
+};
+function reset(e) {
+    var feedbackEmail = e.path[2].getElementsByClassName("feedback-div")[0];
+    feedbackEmail.innerHTML = "";
+    feedbackEmail.classList.remove("feedback-div-error");
 };
 function emailValidation() {
     var emailInput = document.getElementById("email-input");
@@ -23,11 +28,6 @@ function emailValidation() {
         feedbackEmail.appendChild(feedbackP);
         feedbackEmail.classList.add("feedback-div-error");
     };
-};
-function emailReset() {
-    var feedbackEmail = document.getElementById("email-feedback");
-    feedbackEmail.innerHTML = "";
-    feedbackEmail.classList.remove("feedback-div-error");
 };
 function passwordValidation() {
     var passwordInput = document.getElementById("password-input");
@@ -70,34 +70,32 @@ function passwordValidation() {
         return;
     };
 };
-function passwordReset() {
-    var feedbackPassword = document.getElementById("password-feedback");
-    feedbackPassword.innerHTML = "";
-    feedbackPassword.classList.remove("feedback-div-error");
-};
 function submitForm(e) {
     e.preventDefault();
     var email = document.getElementById("email-input").value;
     var password = document.getElementById("password-input").value;
-    var url = "https://basp-m2022-api-rest-server.herokuapp.com/login?email=" 
+    var url = "https://basp-m2022-api-rest-server.herokuapp.com/login?email="
     + email + "&password=" + password;
     var emailStatus = document.getElementById("email-feedback").firstChild;
     var passwordStatus = document.getElementById("password-feedback").firstChild;
-    if (!emailStatus && !passwordStatus){
+    if (!email || !password) {
+        alert("ERROR: All fields are required.");
+        return;
+    };
+    if (!emailStatus && !passwordStatus) {
         fetch(url)
             .then(function (response){
                 return response.json();
             })
             .then(function (data){
-                if(data !== "Success") {
+                if(!data.success) {
                     alert(data.msg);
                     throw new Error("There was an error with the request")
                 };
                 alert(data.msg);
             })
             .catch(function(error){
-                console.log(error)
+                console.log(error);
             })
     };
-    alert("ERROR: " + emailStatus.innerText + "\n" + "ERROR: " + passwordStatus.innerText);
 };
