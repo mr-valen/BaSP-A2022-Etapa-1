@@ -432,7 +432,7 @@ function submit(e) {
         !city || !zip ||
         !email || !password ||
         !repeatEmail || !repeatPassword) {
-            alert("ERROR: All fields are required.");
+            showModal(false, "All fields are required.");
             return;
     };
     if (!firstNameStatus && !lastNameStatus &&
@@ -446,7 +446,7 @@ function submit(e) {
                 return res.json()
             })
             .then(function(data) {
-                alert(data.msg);
+                if (data.msg) showModal(true, data.msg);
                 if (data.success) {
                     localStorage.setItem("name", name);
                     localStorage.setItem("lastName", lastName);
@@ -462,75 +462,45 @@ function submit(e) {
                     var message = ""
                     for (var error of data.errors) {
                         message += "* " + error.msg + "\n"
-                    }
-                    alert("There is one or more errors: \n" + message)
+                    };
+                    showModal(false, "There is one or more errors: \n" + message);
                     throw new Error("There was an error with the request.");
                 };
             })
             .catch(function(error) {
                 console.log(error);
+                showModal(false, error);
             })
     } else {
         var feedbacks = document.getElementsByClassName("feedback-div");
-        var answer = "There is one or more errors: \n"
+        var answer = "There is one or more errors. \n"
         for (const feedback of feedbacks) {
             if (feedback.innerText) {
                 var title = feedback.parentElement.getElementsByTagName("legend")[0].innerText;
-                answer += title + ": " + feedback.innerText + "\n";
+                answer += "* " + title + ": " + feedback.innerText + "\n";
             };
         };
-        alert(answer);
+        showModal(false, answer);
     }
 };
-    // var firstNameAnswer = "";
-    // firstNameStatus? firstNameAnswer = "ERROR: " + firstNameStatus.innerHTML : firstNameAnswer = firstNameInput.value;
-
-    // var lastNameAnswer = "";
-    // lastNameStatus? lastNameAnswer = "ERROR: " + lastNameStatus.innerHTML : lastNameAnswer = lastNameInput.value;
-
-    // var dniAnswer = "";
-    // dniStatus? dniAnswer = "ERROR: " + dniStatus.innerHTML : dniAnswer = dniInput.value;
-
-    // var birthDateAnswer = "";
-    // birthDateStatus? birthDateAnswer = "ERROR: " + birthDateStatus.innerHTML : birthDateAnswer = birthDateInput.value;
-
-    // var phoneAnswer = "";
-    // phoneStatus? phoneAnswer = "ERROR: " + phoneStatus.innerHTML : phoneAnswer = phoneInput.value;
-
-    // var addressAnswer = "";
-    // addressStatus? addressAnswer = "ERROR: " + addressStatus.innerHTML : addressAnswer = addressInput.value;
-
-    // var localityAnswer = "";
-    // localityStatus? localityAnswer = "ERROR: " + localityStatus.innerHTML : localityAnswer = localityInput.value;
-
-    // var postalAnswer = "";
-    // postalStatus? postalAnswer = "ERROR: " + postalStatus.innerHTML : postalAnswer = postalInput.value;
-
-    // var emailAnswer = "";
-    // emailStatus? emailAnswer = "ERROR: " + emailStatus.innerHTML : emailAnswer = emailInput.value;
-
-    // var repeatEmailInput = document.getElementById("repeatemail-input");
-    // var repeatEmailAnswer = "";
-    // repeatEmailStatus? repeatEmailAnswer = "ERROR: " + repeatEmailStatus.innerHTML : repeatEmailAnswer = repeatEmailInput.value;
-
-    // var passwordAnswer = "";
-    // passwordStatus? passwordAnswer = "ERROR: " + passwordStatus.innerHTML : passwordAnswer = passwordInput.value;
-
-    // var repeatPasswordInput = document.getElementById("repeatpassword-input");
-    // var repeatPasswordAnswer = "";
-    // repeatPasswordStatus? repeatPasswordAnswer = "ERROR: " + repeatPasswordStatus.innerHTML : repeatPasswordAnswer = repeatPasswordInput.value;
-
-    // if (!firstNameInput.value) firstNameAnswer = "ERROR: Empty first name field.";
-    // if (!lastNameInput.value) lastNameAnswer = "ERROR: Empty last name field.";
-    // if (!dniInput.value) dniAnswer = "ERROR: Empty DNI field.";
-    // if (!birthDateInput.value) birthDateAnswer = "ERROR: Empty birth date field.";
-    // if (!phoneInput.value) phoneAnswer = "ERROR: Empty phone field.";
-    // if (!addressInput.value) addressAnswer = "ERROR: Empty address field.";
-    // if (!localityInput.value) localityAnswer = "ERROR: Empty locality field.";
-    // if (!postalInput.value) postalAnswer = "ERROR: Empty postal field.";
-    // if (!emailInput.value) emailAnswer = "ERROR: Empty email field.";
-    // if (!repeatEmailInput.value) repeatEmailAnswer = "ERROR: Empty repetead email field.";
-    // if (!passwordInput.value) passwordAnswer = "ERROR: Empty password field.";
-    // if (!passwordInput.value) repeatPasswordAnswer = "ERROR: Empty repeated password field.";
-    // var answer = firstNameAnswer + "\n" + lastNameAnswer + "\n" + dniAnswer + "\n" + birthDateAnswer + "\n" + phoneAnswer + "\n" + addressAnswer + "\n" + localityAnswer + "\n" + postalAnswer + "\n" + emailAnswer + "\n" + repeatEmailAnswer + "\n" + passwordAnswer + "\n" + repeatPasswordAnswer;
-    // alert(answer);
+function showModal(status, msg) {
+    var title =  document.getElementById("modal-title");
+    if (!status) {
+        title.classList.add("modal-title-error");
+        title.innerText = "Error";
+    }
+    if (status) {
+        title.classList.add("modal-title-success");
+        title.innerText = "Success";
+    }
+    document.getElementById("modal-message").innerText = msg;
+    var modal = document.getElementsByClassName("modal-alert")[0];
+    document.getElementById("modal-submit").addEventListener("click", closeModal);
+    modal.classList.remove("modal-hidden");
+};
+function closeModal() {
+    var modal = document.getElementsByClassName("modal-alert")[0];
+    var title =  document.getElementById("modal-title");
+    title.classList = "modal-title";
+    modal.classList.add("modal-hidden");
+};

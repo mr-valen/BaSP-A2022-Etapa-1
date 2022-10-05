@@ -80,7 +80,7 @@ function submitForm(e) {
     var emailStatus = document.getElementById("email-feedback").firstChild;
     var passwordStatus = document.getElementById("password-feedback").firstChild;
     if (!email || !password) {
-        alert("ERROR: All fields are required.");
+        showModal(false, "All fields are required.");
         return;
     };
     if (!emailStatus && !passwordStatus) {
@@ -90,13 +90,34 @@ function submitForm(e) {
             })
             .then(function (data){
                 if(!data.success) {
-                    alert(data.msg);
+                    showModal(false, data.msg);
                     throw new Error("There was an error with the request")
                 };
-                alert(data.msg);
+                showModal(true, data.msg);
             })
             .catch(function(error){
                 console.log(error);
             })
     };
+};
+function showModal(status, msg) {
+    var title =  document.getElementById("modal-title");
+    if (!status) {
+        title.classList.add("modal-title-error");
+        title.innerText = "Error";
+    }
+    if (status) {
+        title.classList.add("modal-title-success");
+        title.innerText = "Success";
+    }
+    document.getElementById("modal-message").innerText = msg;
+    var modal = document.getElementsByClassName("modal-alert")[0];
+    document.getElementById("modal-submit").addEventListener("click", closeModal);
+    modal.classList.remove("modal-hidden");
+};
+function closeModal() {
+    var modal = document.getElementsByClassName("modal-alert")[0];
+    var title =  document.getElementById("modal-title");
+    title.classList = "modal-title";
+    modal.classList.add("modal-hidden");
 };
