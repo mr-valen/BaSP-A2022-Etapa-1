@@ -36,6 +36,7 @@ function reset(e) {
     var feedback = e.path[1].getElementsByClassName("feedback-div")[0];
     feedback.innerHTML = "";
     input.classList.remove("input-error");
+    input.classList.remove("input-success");
 };
 function autocomplete() {
     var name = localStorage.getItem("name");
@@ -108,6 +109,7 @@ function firstNameValidation() {
         feedbackP.classList.add("feedback-p-error");
         feedbackFirstName.appendChild(feedbackP);
         firstNameInput.classList.add("input-error");
+        return;
     };
     for (var i = 0; i < firstNameTry.length; i++) {
         if (!isNaN(parseInt(firstNameTry[i])) || (firstNameTry[i].charCodeAt() > 32
@@ -116,8 +118,10 @@ function firstNameValidation() {
             feedbackP.classList.add("feedback-p-error");
             feedbackFirstName.appendChild(feedbackP);
             firstNameInput.classList.add("input-error");
+            return;
         };
     };
+    firstNameInput.classList.add("input-success");
 };
 function lastNameValidation() {
     var lastNameInput = document.getElementById("lastname-input");
@@ -141,8 +145,10 @@ function lastNameValidation() {
             feedbackP.classList.add("feedback-p-error");
             feedbackLastName.appendChild(feedbackP);
             lastNameInput.classList.add("input-error");
+            return;
         };
     };
+    lastNameInput.classList.add("input-success");
 };
 function dniValidation() {
     var dniInput = document.getElementById("dni-input");
@@ -157,6 +163,7 @@ function dniValidation() {
         feedbackP.classList.add("feedback-p-error");
         feedbackDni.appendChild(feedbackP);
         dniInput.classList.add("input-error");
+        return;
     };
     for (var i = 0; i < dniTry.length; i++) {
         if (isNaN(parseInt(dniTry[i]))) {
@@ -164,8 +171,10 @@ function dniValidation() {
             feedbackP.classList.add("feedback-p-error");
             feedbackDni.appendChild(feedbackP);
             dniInput.classList.add("input-error");
+            return;
         };
     };
+    dniInput.classList.add("input-success");
 };
 function dobValidation() {
     var dobInput = document.getElementById("dob-input");
@@ -177,7 +186,9 @@ function dobValidation() {
         feedbackP.classList.add("feedback-p-error");
         feedbackBirthDate.appendChild(feedbackP);
         dobInput.classList.add("input-error");
+        return;
     };
+    dobInput.classList.add("input-success");
 };
 function phoneValidation() {
     var phoneInput = document.getElementById("phone-input");
@@ -192,6 +203,7 @@ function phoneValidation() {
         feedbackP.classList.add("feedback-p-error");
         feedbackPhone.appendChild(feedbackP);
         phoneInput.classList.add("input-error");
+        return;
     };
     for (var i = 0; i < phoneTry.length; i++) {
         if (isNaN(parseInt(phoneTry[i]))) {
@@ -199,8 +211,10 @@ function phoneValidation() {
             feedbackP.classList.add("feedback-p-error");
             feedbackPhone.appendChild(feedbackP);
             phoneInput.classList.add("input-error");
+            return;
         };
     };
+    phoneInput.classList.add("input-success");
 };
 function addressValidation() {
     var addressInput = document.getElementById("address-input");
@@ -216,6 +230,7 @@ function addressValidation() {
         feedbackP.classList.add("feedback-p-error");
         feedbackAddress.appendChild(feedbackP);
         addressInput.classList.add("input-error");
+        return;
     };
     for (var i = 0; i < lastSpace; i++) {
         if (!isNaN(parseInt(addressTry[i]))) {
@@ -223,6 +238,7 @@ function addressValidation() {
             feedbackP.classList.add("feedback-p-error");
             feedbackAddress.appendChild(feedbackP);
             addressInput.classList.add("input-error");
+            return;
         };
     };
     for (var i = addressTry.length-1; i > lastSpace; i--) {
@@ -231,6 +247,7 @@ function addressValidation() {
             feedbackP.classList.add("feedback-p-error");
             feedbackAddress.appendChild(feedbackP);
             addressInput.classList.add("input-error");
+            return;
         };
     };
     if (lastSpace === -1) {
@@ -238,13 +255,16 @@ function addressValidation() {
         feedbackP.classList.add("feedback-p-error");
         feedbackAddress.appendChild(feedbackP);
         addressInput.classList.add("input-error");
+        return;
     };
     if (lastSpace === addressTry.length-1) {
         feedbackP.innerText = "It must end with numbers.";
         feedbackP.classList.add("feedback-p-error");
         feedbackAddress.appendChild(feedbackP);
         addressInput.classList.add("input-error");
+        return;
     };
+    addressInput.classList.add("input-success");
 };
 function cityValidation() {
     var cityInput = document.getElementById("city-input");
@@ -259,6 +279,7 @@ function cityValidation() {
         feedbackP.classList.add("feedback-p-error");
         feedbackLocality.appendChild(feedbackP);
         cityInput.classList.add("input-error");
+        return;
     };
     for (var i = 0; i < cityTry.length; i++) {
         if ((cityTry[i].charCodeAt() > 32 && cityTry[i].charCodeAt() < 48)) {
@@ -266,9 +287,10 @@ function cityValidation() {
             feedbackP.classList.add("feedback-p-error");
             feedbackLocality.appendChild(feedbackP);
             cityInput.classList.add("input-error");
+            return;
         };
     };
-
+    cityInput.classList.add("input-success");
 };
 function zipValidation() {
     var zipInput = document.getElementById("zip-input");
@@ -283,6 +305,7 @@ function zipValidation() {
         feedbackP.classList.add("feedback-p-error");
         feedbackPostal.appendChild(feedbackP);
         zipInput.classList.add("input-error");
+        return;
     };
     for (var i = 0; i < zipTry.length-1; i++) {
         if (isNaN(parseInt(zipTry[i]))) {
@@ -290,9 +313,10 @@ function zipValidation() {
             feedbackP.classList.add("feedback-p-error");
             feedbackPostal.appendChild(feedbackP);
             zipInput.classList.add("input-error");
+            return;
         };
     };
-
+    zipInput.classList.add("input-success");
 };
 function emailValidation() {
     var emailInput = document.getElementById("email-input");
@@ -308,7 +332,9 @@ function emailValidation() {
         feedbackEmail.appendChild(feedbackP);
         feedbackEmail.classList.add("feedback-div-error");
         emailInput.classList.add("input-error");
+        return;
     };
+    emailInput.classList.add("input-success");
 };
 function repeatEmailValidation() {
     var emailInput = document.getElementById("email-input");
@@ -324,7 +350,9 @@ function repeatEmailValidation() {
         feedbackRepeatEmail.appendChild(feedbackP);
         feedbackRepeatEmail.classList.add("feedback-div-error");
         repeatEmailInput.classList.add("input-error");
-    }
+        return;
+    };
+    repeatEmailInput.classList.add("input-success");
 };
 function passwordValidation() {
     var passwordInput = document.getElementById("password-input");
@@ -375,6 +403,7 @@ function passwordValidation() {
         passwordInput.classList.add("input-error");
         return;
     };
+    passwordInput.classList.add("input-success");
 };
 function repeatPasswordValidation() {
     var passwordInput = document.getElementById("password-input");
@@ -390,7 +419,9 @@ function repeatPasswordValidation() {
         feedbackRepeatPassword.appendChild(feedbackP);
         feedbackRepeatPassword.classList.add("feedback-div-error");
         repeatPasswordInput.classList.add("input-error");
-    }
+        return;
+    };
+    repeatPasswordInput.classList.add("input-success");
 };
 function submit(e) {
     e.preventDefault();

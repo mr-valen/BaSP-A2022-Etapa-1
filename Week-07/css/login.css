@@ -47,6 +47,9 @@ main h1 {
     border-top: 1px solid var(--clr-alert);
     color: var(--clr-alert);
 }
+.feedback-div-success {
+    border-top: 1px solid var(--clr-success);
+}
 .login-form img, .login-form input[type=checkbox] {
     display: flex;
     width: 40px;

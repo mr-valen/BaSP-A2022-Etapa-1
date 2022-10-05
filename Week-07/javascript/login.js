@@ -13,6 +13,7 @@ function reset(e) {
     var feedbackEmail = e.path[2].getElementsByClassName("feedback-div")[0];
     feedbackEmail.innerHTML = "";
     feedbackEmail.classList.remove("feedback-div-error");
+    feedbackEmail.classList.remove("feedback-div-success");
 };
 function emailValidation() {
     var emailInput = document.getElementById("email-input");
@@ -27,7 +28,9 @@ function emailValidation() {
         feedbackP.classList.add("feedback-p-error");
         feedbackEmail.appendChild(feedbackP);
         feedbackEmail.classList.add("feedback-div-error");
+        return;
     };
+    feedbackEmail.classList.add("feedback-div-success");
 };
 function passwordValidation() {
     var passwordInput = document.getElementById("password-input");
@@ -70,6 +73,7 @@ function passwordValidation() {
         feedbackPassword.classList.add("feedback-div-error");
         return;
     };
+    feedbackPassword.classList.add("feedback-div-success");
 };
 function submitForm(e) {
     e.preventDefault();
