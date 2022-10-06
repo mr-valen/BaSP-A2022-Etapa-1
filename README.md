@@ -9,6 +9,7 @@
 * [Week 04](#week-04)
 * [Week 05](#week-05)
 * [Week 06](#week-06)
+* [Week 07](#week-07)
 * [Author](#author)
 
 ## Description
