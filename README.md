@@ -69,7 +69,7 @@ Now that we learned about JavaScript we started working on the site by adding va
 ### 💌 Fetch, sending a promise
 [GitHub Pages](https://mr-valen.github.io/BaSP-A2022-Etapa-1/Week-07/views/index.html)
 
-On this week we learned how to make a request using fetching into an external API.
+On this week we learned how to make a request fetching into an external API.
  * 🧰 | `JavaScript` | `Fetch` | `Promises` | `Git` | `GitHub` |
  * 🔨 | JavaScript: Fetch into an API |
 
